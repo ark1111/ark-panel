@@ -1,16 +1,41 @@
-import { Box, Logo, LogoText } from "./index.styled"
+import {
+  Box,
+  Logo,
+  LogoText,
+  Menu,
+  MenuItem,
+  MenuItemMain,
+  MenuItemMainIcon,
+  MenuItemMainLeft,
+  MenuItemMainText,
+  TopPart,
+} from "./index.styled";
+import { MenuList } from "./list";
 
-type Props = {}
-
+type Props = {};
 
 const Nav = (props: Props) => {
   return (
     <Box>
+      <TopPart>
         <Logo>
-            <LogoText>ARK</LogoText>
+          <LogoText>ARK</LogoText>
         </Logo>
+        <Menu>
+          {MenuList.map((item) => (
+            <MenuItem>
+              <MenuItemMain>
+                <MenuItemMainLeft>
+                  <MenuItemMainIcon></MenuItemMainIcon>
+                  <MenuItemMainText>{item.title}</MenuItemMainText>
+                </MenuItemMainLeft>
+              </MenuItemMain>
+            </MenuItem>
+          ))}
+        </Menu>
+      </TopPart>
     </Box>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
