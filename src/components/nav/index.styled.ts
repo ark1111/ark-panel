@@ -6,6 +6,10 @@ export const Box = styled.div`
   background-color: #fff;
   border-radius: 10px;
   padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 `;
 
 export const TopPart = styled.div`
@@ -89,4 +93,52 @@ export const ChildItemText = styled.div`
   font-size: 18px;
   color: #111;
   opacity: 70%;
+`;
+
+export const Profile = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  align-items: center;
+`;
+
+export const ProfileAvatar = styled.div`
+  width: 25%;
+  aspect-ratio: 1/1;
+  border-radius: 1000px;
+  overflow: hidden;
+  background-color: #555;
+`;
+
+export const ProfileText = styled.div`
+  font-size: 22px;
+  color: #111;
+  font-weight: bold;
+`;
+
+export const ProfileSubText = styled.div`
+  font-size: 16px;
+  color: #111;
+  opacity: 70%;
+`;
+
+export const ProfileButtons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+  margin-top: 10px;
+`;
+
+export const ProfileButtonItem = styled.div`
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  cursor: pointer;
 `;

@@ -12,6 +12,12 @@ import {
   MenuItemMainIcon,
   MenuItemMainLeft,
   MenuItemMainText,
+  Profile,
+  ProfileAvatar,
+  ProfileButtonItem,
+  ProfileButtons,
+  ProfileSubText,
+  ProfileText,
   TopPart,
 } from "./index.styled";
 import { MenuList } from "./list";
@@ -48,6 +54,15 @@ const Nav = (props: Props) => {
           ))}
         </Menu>
       </TopPart>
+      <Profile>
+        <ProfileAvatar></ProfileAvatar>
+        <ProfileText>Alireza</ProfileText>
+        <ProfileSubText>alireza.khaji11@gmail.com</ProfileSubText>
+        <ProfileButtons>
+          <ProfileButtonItem></ProfileButtonItem>
+          <ProfileButtonItem></ProfileButtonItem>
+        </ProfileButtons>
+      </Profile>
     </Box>
   );
 };
