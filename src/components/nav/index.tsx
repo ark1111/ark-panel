@@ -28,9 +28,15 @@ type Props = {};
 const Nav = (props: Props) => {
   const [activeNav, setActiveNav] = useState(1);
   const [activeChildNav, setActiveChildNav] = useState<null | number>(null);
+  const [activeToggleId, setActiveToggleId] = useState<null | number>(null);
 
   const changeNav = (id: number, index: number) => {
     if (MenuList[index].childs.length > 0) {
+      if (id === activeToggleId) {
+        setActiveToggleId(null);
+      } else {
+        setActiveToggleId(id);
+      }
     } else {
       setActiveNav(id);
       setActiveChildNav(null);
@@ -62,14 +68,14 @@ const Nav = (props: Props) => {
                 </MenuItemMainLeft>
               </MenuItemMain>
               {item.childs?.length > 0 && (
-                <MenuItemChilds>
+                <MenuItemChilds $isActive={item.id === activeToggleId}>
                   {item.childs.map((childItem) => (
                     <MenuItemChildItem
                       key={childItem.id}
-                      onClick={() => childchangeNav(item.id,childItem.id)}
+                      onClick={() => childchangeNav(item.id, childItem.id)}
                       $isActive={childItem.id === activeChildNav}
                     >
-                      <ChildItemDot ></ChildItemDot>
+                      <ChildItemDot></ChildItemDot>
                       <ChildItemText>{childItem.title}</ChildItemText>
                     </MenuItemChildItem>
                   ))}

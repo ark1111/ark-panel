@@ -68,9 +68,12 @@ export const MenuItemMainText = styled.div<{ $isActive: boolean }>`
   color: ${(props) => (props.$isActive ? "#ffffff" : "#111")};
 `;
 
-export const MenuItemChilds = styled.div`
+export const MenuItemChilds = styled.div<{ $isActive: boolean }>`
   width: 100%;
   padding-left: 50px;
+  max-height: ${(props) => (props.$isActive ? "1000px" : "0px")};
+  overflow: hidden;
+  transition: all 1s;
 `;
 
 export const MenuItemChildItem = styled.div<{ $isActive: boolean }>`
