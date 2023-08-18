@@ -36,7 +36,7 @@ export const Menu = styled.div`
 
 export const MenuItem = styled.div`
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 `;
 
 export const MenuItemMain = styled.div<{ $isActive: boolean }>`
@@ -55,6 +55,12 @@ export const MenuItemMainLeft = styled.div`
   display: flex;
   align-items: center;
   column-gap: 10px;
+`;
+
+export const ToggleIcon = styled.div<{ $isActive: boolean }>`
+  transform: ${(props) =>
+    props.$isActive ? "rotate(180deg)" : "rotate(0deg)"};
+  transition: all 1s;
 `;
 
 export const MenuItemMainIcon = styled.div`

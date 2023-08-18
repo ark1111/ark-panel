@@ -19,9 +19,12 @@ import {
   ProfileButtons,
   ProfileSubText,
   ProfileText,
+  ToggleIcon,
   TopPart,
 } from "./index.styled";
 import { MenuList } from "./list";
+import ArrowDown1 from "../../assets/ArrowDown1";
+
 
 type Props = {};
 
@@ -61,11 +64,20 @@ const Nav = (props: Props) => {
                 onClick={() => changeNav(item.id, index)}
               >
                 <MenuItemMainLeft>
-                  <MenuItemMainIcon></MenuItemMainIcon>
+                  {/* <MenuItemMainIcon></MenuItemMainIcon> */}
+                  {item.icon}
                   <MenuItemMainText $isActive={item.id === activeNav}>
                     {item.title}
                   </MenuItemMainText>
                 </MenuItemMainLeft>
+                {item.childs?.length > 0 && (
+                  <ToggleIcon $isActive={item.id === activeToggleId}>
+                    <ArrowDown1
+                      width="12px"
+                      color={item.id === activeNav ? "#fff" : "#111"}
+                    />
+                  </ToggleIcon>
+                )}
               </MenuItemMain>
               {item.childs?.length > 0 && (
                 <MenuItemChilds $isActive={item.id === activeToggleId}>
