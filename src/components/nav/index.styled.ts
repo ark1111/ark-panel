@@ -39,11 +39,11 @@ export const MenuItem = styled.div`
   margin-bottom: 10px;
 `;
 
-export const MenuItemMain = styled.div`
+export const MenuItemMain = styled.div<{ $isActive: boolean }>`
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #111;
+  background-color: ${(props) => (props.$isActive ? "#111" : "transparent")};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,9 +63,9 @@ export const MenuItemMainIcon = styled.div`
   background-color: #333;
 `;
 
-export const MenuItemMainText = styled.div`
+export const MenuItemMainText = styled.div<{ $isActive: boolean }>`
   font-size: 20px;
-  color: #111;
+  color: ${(props) => (props.$isActive ? "#ffffff" : "#111")};
 `;
 
 export const MenuItemChilds = styled.div`
@@ -73,13 +73,14 @@ export const MenuItemChilds = styled.div`
   padding-left: 50px;
 `;
 
-export const MenuItemChildItem = styled.div`
+export const MenuItemChildItem = styled.div<{ $isActive: boolean }>`
   width: 100%;
   display: flex;
   align-items: center;
   column-gap: 10px;
   padding: 10px 0;
   cursor: pointer;
+  opacity: ${(props) => (props.$isActive ? "100%" : "60%")};
 `;
 
 export const ChildItemDot = styled.div`
@@ -92,7 +93,6 @@ export const ChildItemDot = styled.div`
 export const ChildItemText = styled.div`
   font-size: 18px;
   color: #111;
-  opacity: 70%;
 `;
 
 export const Profile = styled.div`
