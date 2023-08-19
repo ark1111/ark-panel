@@ -24,6 +24,7 @@ import {
 } from "./index.styled";
 import { MenuList } from "./list";
 import ArrowDown1 from "../../assets/ArrowDown1";
+import Setting1 from "../../assets/Setting1";
 
 type Props = {};
 
@@ -101,7 +102,9 @@ const Nav = (props: Props) => {
         <ProfileText>Alireza</ProfileText>
         <ProfileSubText>alireza.khaji11@gmail.com</ProfileSubText>
         <ProfileButtons>
-          <ProfileButtonItem></ProfileButtonItem>
+          <ProfileButtonItem>
+            <Setting1/>
+          </ProfileButtonItem>
           <ProfileButtonItem></ProfileButtonItem>
         </ProfileButtons>
       </Profile>
