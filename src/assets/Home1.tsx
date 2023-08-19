@@ -37,7 +37,7 @@ const Home1 = ({ width, color1, color2 }: Props) => {
           ry="1.11"
           style={{
             fill: color2 || "#111111",
-            stroke: "#111111",
+            stroke: color2 || "#111111",
             strokeLinecap: "round",
             strokeLinejoin: "round",
           }}
@@ -51,7 +51,7 @@ const Home1 = ({ width, color1, color2 }: Props) => {
           ry="1.11"
           style={{
             fill: color2 || "#111111",
-            stroke: "#111111",
+            stroke: color2 || "#111111",
             strokeLinecap: "round",
             strokeLinejoin: "round",
           }}
@@ -66,7 +66,7 @@ const Home1 = ({ width, color1, color2 }: Props) => {
         ry="1.11"
         style={{
           fill: color2 || "#111111",
-          stroke: "#111111",
+          stroke: color2 || "#111111",
           strokeLinecap: "round",
           strokeLinejoin: "round",
         }}

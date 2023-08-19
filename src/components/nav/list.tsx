@@ -1,10 +1,10 @@
-import { FC } from "react";
 import Home1 from "../../assets/Home1";
 
 export const MenuList: {
   id: number;
   title: string;
   icon: JSX.Element | null;
+  activeIcon: JSX.Element | null;
   childs: {
     id: number;
     title: string;
@@ -16,6 +16,7 @@ export const MenuList: {
     id: 1,
     title: "Dashboard",
     icon: <Home1 width="25px" />,
+    activeIcon: <Home1 width="25px" color2="#a8a8a8" color1="#fff" />,
     childs: [],
     link: "",
   },
@@ -23,6 +24,7 @@ export const MenuList: {
     id: 2,
     title: "Posts",
     icon: null,
+    activeIcon: null,
     childs: [],
     link: "",
   },
@@ -30,6 +32,7 @@ export const MenuList: {
     id: 3,
     title: "Inbox",
     icon: null,
+    activeIcon: null,
     childs: [],
     link: "",
   },
@@ -37,6 +40,7 @@ export const MenuList: {
     id: 4,
     title: "Income",
     icon: null,
+    activeIcon: null,
     childs: [
       {
         id: 4,

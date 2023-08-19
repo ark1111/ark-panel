@@ -25,7 +25,6 @@ import {
 import { MenuList } from "./list";
 import ArrowDown1 from "../../assets/ArrowDown1";
 
-
 type Props = {};
 
 const Nav = (props: Props) => {
@@ -65,7 +64,7 @@ const Nav = (props: Props) => {
               >
                 <MenuItemMainLeft>
                   {/* <MenuItemMainIcon></MenuItemMainIcon> */}
-                  {item.icon}
+                  {item.id === activeNav ? item.activeIcon : item.icon}
                   <MenuItemMainText $isActive={item.id === activeNav}>
                     {item.title}
                   </MenuItemMainText>
