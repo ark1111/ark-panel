@@ -25,6 +25,7 @@ import {
 import { MenuList } from "./list";
 import ArrowDown1 from "../../assets/ArrowDown1";
 import Setting1 from "../../assets/Setting1";
+import Logout1 from "../../assets/Logout1";
 
 type Props = {};
 
@@ -103,9 +104,11 @@ const Nav = (props: Props) => {
         <ProfileSubText>alireza.khaji11@gmail.com</ProfileSubText>
         <ProfileButtons>
           <ProfileButtonItem>
-            <Setting1/>
+            <Setting1 />
           </ProfileButtonItem>
-          <ProfileButtonItem></ProfileButtonItem>
+          <ProfileButtonItem>
+            <Logout1 />
+          </ProfileButtonItem>
         </ProfileButtons>
       </Profile>
     </Box>
