@@ -10,6 +10,7 @@ import {
 } from "./index.styled";
 import SearchBox from "../search";
 import ArrowDown1 from "../../assets/ArrowDown1";
+import Notification1 from "../../assets/Notification1";
 
 type Props = {
   changeTheme: Function;
@@ -27,7 +28,9 @@ const Header = ({ changeTheme }: Props) => {
           <ArrowDown1 width="12px" color="#111" />
         </Language>
         <ThemeMode onClick={() => changeTheme()}>T</ThemeMode>
-        <Notification>N</Notification>
+        <Notification>
+          <Notification1 />
+        </Notification>
       </ButtonsContainer>
     </Box>
   );
