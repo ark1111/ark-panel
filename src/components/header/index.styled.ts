@@ -41,7 +41,26 @@ export const ThemeMode = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
+  overflow: hidden;
+`;
+
+export const ThemeModeBox = styled.div<{ $modeIndex: number }>`
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+  transform: ${(props) =>
+    props.$modeIndex === 0 ? "translateX(0px)" : "translateX(-50px)"};
+`;
+
+export const ThemeModeBoxItem = styled.div`
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 `;
 
 export const Language = styled.div`

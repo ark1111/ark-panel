@@ -17,7 +17,7 @@ function App() {
       <Container>
         <Nav></Nav>
         <Page>
-          <Header changeTheme={changeTheme}></Header>
+          <Header changeTheme={changeTheme} themeIndex={themeIndex}></Header>
         </Page>
       </Container>
     </ThemeProvider>

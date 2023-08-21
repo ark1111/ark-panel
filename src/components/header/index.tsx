@@ -7,16 +7,21 @@ import {
   Notification,
   SearchBoxContainer,
   ThemeMode,
+  ThemeModeBox,
+  ThemeModeBoxItem,
 } from "./index.styled";
 import SearchBox from "../search";
 import ArrowDown1 from "../../assets/ArrowDown1";
 import Notification1 from "../../assets/Notification1";
+import Sun1 from "../../assets/Sun1";
+import Moon1 from "../../assets/Moon1";
 
 type Props = {
   changeTheme: Function;
+  themeIndex: number;
 };
 
-const Header = ({ changeTheme }: Props) => {
+const Header = ({ changeTheme, themeIndex }: Props) => {
   return (
     <Box>
       <SearchBoxContainer>
@@ -27,7 +32,16 @@ const Header = ({ changeTheme }: Props) => {
           <LanguageText>En</LanguageText>
           <ArrowDown1 width="12px" color="#111" />
         </Language>
-        <ThemeMode onClick={() => changeTheme()}>T</ThemeMode>
+        <ThemeMode onClick={() => changeTheme()}>
+          <ThemeModeBox $modeIndex={themeIndex}>
+            <ThemeModeBoxItem>
+              <Sun1 />
+            </ThemeModeBoxItem>
+            <ThemeModeBoxItem>
+              <Moon1 />
+            </ThemeModeBoxItem>
+          </ThemeModeBox>
+        </ThemeMode>
         <Notification>
           <Notification1 />
         </Notification>

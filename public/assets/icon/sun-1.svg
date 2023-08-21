@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.68 19.71">
+  <circle cx="10.05" cy="9.87" r="5.22" style="fill: #a8a8a8;"/>
+  <rect x="9.4" y=".12" width="1.3" height="2.61" rx=".59" ry=".59" style="fill: #231f20;"/>
+  <rect x="9.4" y="17.01" width="1.3" height="2.61" rx=".59" ry=".59" style="fill: #231f20;"/>
+  <rect x=".78" y="8.56" width="1.3" height="2.61" rx=".59" ry=".59" transform="translate(-8.44 11.29) rotate(-90)" style="fill: #231f20;"/>
+  <rect x="17.67" y="8.56" width="1.3" height="2.61" rx=".59" ry=".59" transform="translate(8.45 28.18) rotate(-90)" style="fill: #231f20;"/>
+  <rect x="3.43" y="2.59" width="1.3" height="2.61" rx=".59" ry=".59" transform="translate(-1.56 4.03) rotate(-45)" style="fill: #231f20;"/>
+  <rect x="15.37" y="14.53" width="1.3" height="2.61" rx=".59" ry=".59" transform="translate(-6.51 15.97) rotate(-45)" style="fill: #231f20;"/>
+  <rect x="15.37" y="2.59" width="1.3" height="2.61" rx=".59" ry=".59" transform="translate(24.6 17.98) rotate(-135)" style="fill: #231f20;"/>
+  <rect x="3.43" y="14.53" width="1.3" height="2.61" rx=".59" ry=".59" transform="translate(-4.24 29.92) rotate(-135)" style="fill: #231f20;"/>
+</svg>
