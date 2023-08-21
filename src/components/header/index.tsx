@@ -11,9 +11,11 @@ import {
 import SearchBox from "../search";
 import ArrowDown1 from "../../assets/ArrowDown1";
 
-type Props = {};
+type Props = {
+  changeTheme: Function;
+};
 
-const Header = (props: Props) => {
+const Header = ({ changeTheme }: Props) => {
   return (
     <Box>
       <SearchBoxContainer>
@@ -24,7 +26,7 @@ const Header = (props: Props) => {
           <LanguageText>En</LanguageText>
           <ArrowDown1 width="12px" color="#111" />
         </Language>
-        <ThemeMode>T</ThemeMode>
+        <ThemeMode onClick={() => changeTheme()}>T</ThemeMode>
         <Notification>N</Notification>
       </ButtonsContainer>
     </Box>
