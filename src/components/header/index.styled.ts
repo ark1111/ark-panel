@@ -73,9 +73,30 @@ export const Language = styled.div`
   border-radius: 10px;
   border: 1px solid #555;
   cursor: pointer;
+  position: relative;
 `;
 
 export const LanguageText = styled.div`
   font-size: 16px;
   color: #111;
+`;
+
+export const LanguageItems = styled.div`
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #555;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  z-index: 20;
+  background-color: ${(props) => props.theme.colors.surface};
+`;
+
+export const LanguageItem = styled.div`
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 14px;
+  color: #111;
+  cursor: pointer;
+  text-align: center;
 `;
