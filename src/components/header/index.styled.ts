@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const Box = styled.div`
   width: 100%;
   height: 100px;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.surface};
   border-radius: 10px;
   padding: 0px 30px;
   display: flex;

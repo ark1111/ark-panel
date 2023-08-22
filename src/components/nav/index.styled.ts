@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const Box = styled.div`
   width: 400px;
   height: 100%;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.surface};
   border-radius: 10px;
   padding: 30px;
   display: flex;
@@ -26,7 +26,7 @@ export const Logo = styled.div`
 export const LogoText = styled.div`
   font-size: 35px;
   font-weight: bold;
-  color: #111;
+  color: ${(props) => props.theme.colors.surfaceText};
 `;
 
 export const Menu = styled.div`
@@ -43,7 +43,8 @@ export const MenuItemMain = styled.div<{ $isActive: boolean }>`
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  background-color: ${(props) => (props.$isActive ? "#111" : "transparent")};
+  background-color: ${(props) =>
+    props.$isActive ? props.theme.colors.primary : "transparent"};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,7 +72,8 @@ export const MenuItemMainIcon = styled.div`
 
 export const MenuItemMainText = styled.div<{ $isActive: boolean }>`
   font-size: 20px;
-  color: ${(props) => (props.$isActive ? "#ffffff" : "#111")};
+  color: ${(props) =>
+    props.$isActive ? "#ffffff" : props.theme.colors.surfaceText};
 `;
 
 export const MenuItemChilds = styled.div<{ $isActive: boolean }>`
@@ -101,7 +103,7 @@ export const ChildItemDot = styled.div`
 
 export const ChildItemText = styled.div`
   font-size: 18px;
-  color: #111;
+  color: ${(props) => props.theme.colors.surfaceText};
 `;
 
 export const Profile = styled.div`
@@ -122,13 +124,13 @@ export const ProfileAvatar = styled.div`
 
 export const ProfileText = styled.div`
   font-size: 22px;
-  color: #111;
+  color: ${(props) => props.theme.colors.surfaceText};
   font-weight: bold;
 `;
 
 export const ProfileSubText = styled.div`
   font-size: 16px;
-  color: #111;
+  color: ${(props) => props.theme.colors.surfaceText};
   opacity: 70%;
 `;
 
