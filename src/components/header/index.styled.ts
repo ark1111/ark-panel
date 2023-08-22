@@ -26,7 +26,8 @@ export const Notification = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  border: 1px solid #555;
+  border: 1px solid;
+  border-color: ${(props) => props.theme.colors.border};
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -37,7 +38,8 @@ export const ThemeMode = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  border: 1px solid #555;
+  border: 1px solid;
+  border-color: ${(props) => props.theme.colors.border};
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -71,20 +73,22 @@ export const Language = styled.div`
   justify-content: space-between;
   padding: 0 10px;
   border-radius: 10px;
-  border: 1px solid #555;
+  border: 1px solid;
+  border-color: ${(props) => props.theme.colors.border};
   cursor: pointer;
   position: relative;
 `;
 
 export const LanguageText = styled.div`
   font-size: 16px;
-  color: #111;
+  color: ${(props) => props.theme.colors.surfaceText};
 `;
 
 export const LanguageItems = styled.div`
   width: 100%;
   border-radius: 10px;
-  border: 1px solid #555;
+  border: 1px solid;
+  border-color: ${(props) => props.theme.colors.border};
   position: absolute;
   top: 60px;
   left: 0px;
@@ -96,7 +100,7 @@ export const LanguageItem = styled.div`
   width: 100%;
   padding: 10px 5px;
   font-size: 14px;
-  color: #111;
+  color: ${(props) => props.theme.colors.surfaceText};;
   cursor: pointer;
   text-align: center;
 `;

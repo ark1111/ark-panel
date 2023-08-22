@@ -98,7 +98,7 @@ export const ChildItemDot = styled.div`
   width: 10px;
   height: 10px;
   border-radius: 1000px;
-  background-color: #111;
+  background-color: ${(props) => props.theme.colors.primary};
 `;
 
 export const ChildItemText = styled.div`
@@ -119,7 +119,7 @@ export const ProfileAvatar = styled.div`
   aspect-ratio: 1/1;
   border-radius: 1000px;
   overflow: hidden;
-  background-color: #555;
+  background-color: ${(props) => props.theme.colors.primary};
 `;
 
 export const ProfileText = styled.div`
@@ -146,7 +146,8 @@ export const ProfileButtonItem = styled.div`
   width: 45px;
   height: 45px;
   border-radius: 10px;
-  border: 1px solid #555;
+  border: 1px solid;
+  border-color: ${(props) => props.theme.colors.border};
   display: flex;
   align-items: center;
   justify-content: center;

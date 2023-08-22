@@ -1,14 +1,15 @@
-import { Box, Input } from './index.styled'
+import Search1 from "../../assets/Search1";
+import { Box, Input } from "./index.styled";
 
-type Props = {}
+type Props = {};
 
 const SearchBox = (props: Props) => {
   return (
     <Box>
-        <div style={{width:'20px'}}>O</div>
-        <Input></Input>
+      <Search1 />
+      <Input></Input>
     </Box>
-  )
-}
+  );
+};
 
 export default SearchBox;

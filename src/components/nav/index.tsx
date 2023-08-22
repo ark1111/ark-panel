@@ -26,10 +26,13 @@ import { MenuList } from "./list";
 import ArrowDown1 from "../../assets/ArrowDown1";
 import Setting1 from "../../assets/Setting1";
 import Logout1 from "../../assets/Logout1";
+import { useTheme } from "styled-components";
 
 type Props = {};
 
 const Nav = (props: Props) => {
+  const theme = useTheme();
+
   const [activeNav, setActiveNav] = useState(1);
   const [activeChildNav, setActiveChildNav] = useState<null | number>(null);
   const [activeToggleId, setActiveToggleId] = useState<null | number>(null);
@@ -75,7 +78,11 @@ const Nav = (props: Props) => {
                   <ToggleIcon $isActive={item.id === activeToggleId}>
                     <ArrowDown1
                       width="12px"
-                      color={item.id === activeNav ? "#fff" : "#111"}
+                      color={
+                        item.id === activeNav
+                          ? "#fff"
+                          : theme.colors.surfaceText
+                      }
                     />
                   </ToggleIcon>
                 )}

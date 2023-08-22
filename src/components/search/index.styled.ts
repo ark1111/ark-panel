@@ -8,7 +8,8 @@ export const Box = styled.div`
   display: flex;
   align-items: center;
   column-gap: 10px;
-  border: 1px solid #555;
+  border: 1px solid;
+  border-color: ${(props) => props.theme.colors.border};
 `;
 
 export const Input = styled.input`
@@ -18,4 +19,5 @@ export const Input = styled.input`
   border: none;
   outline: none;
   font-size: 20px;
+  color: ${(props) => props.theme.colors.surfaceText};
 `;

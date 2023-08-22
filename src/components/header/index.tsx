@@ -18,6 +18,7 @@ import Notification1 from "../../assets/Notification1";
 import Sun1 from "../../assets/Sun1";
 import Moon1 from "../../assets/Moon1";
 import { languages } from "../../locals/languages";
+import { useTheme } from "styled-components";
 
 type Props = {
   changeTheme: Function;
@@ -25,6 +26,8 @@ type Props = {
 };
 
 const Header = ({ changeTheme, themeIndex }: Props) => {
+  const theme = useTheme();
+
   const [languageIsActive, setLanguageIsActive] = useState(false);
 
   const activeLanguageHandler = () => {
@@ -38,7 +41,7 @@ const Header = ({ changeTheme, themeIndex }: Props) => {
       <ButtonsContainer>
         <Language onClick={activeLanguageHandler}>
           <LanguageText>En</LanguageText>
-          <ArrowDown1 width="12px" color="#111" />
+          <ArrowDown1 width="12px" color={theme.colors.surfaceText} />
           {languageIsActive && (
             <LanguageItems>
               {languages.map((item, index) => (
