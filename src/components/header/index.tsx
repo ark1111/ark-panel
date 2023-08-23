@@ -24,13 +24,14 @@ import i18n from "../../locals/i18n";
 type Props = {
   changeTheme: Function;
   themeIndex: number;
+  language: string;
+  setLanguage: Function;
 };
 
-const Header = ({ changeTheme, themeIndex }: Props) => {
+const Header = ({ changeTheme, themeIndex, language, setLanguage }: Props) => {
   const theme = useTheme();
 
   const [languageIsActive, setLanguageIsActive] = useState(false);
-  const [language, setLanguage] = useState("En");
 
   const activeLanguageHandler = () => {
     setLanguageIsActive((state) => !state);
@@ -39,6 +40,7 @@ const Header = ({ changeTheme, themeIndex }: Props) => {
   const changeLanguage = (value: string) => {
     i18n.changeLanguage(value.toLowerCase());
     setLanguage(value);
+    localStorage.setItem("language", value);
   };
   return (
     <Box>
