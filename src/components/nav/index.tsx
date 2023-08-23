@@ -27,11 +27,13 @@ import ArrowDown1 from "../../assets/ArrowDown1";
 import Setting1 from "../../assets/Setting1";
 import Logout1 from "../../assets/Logout1";
 import { useTheme } from "styled-components";
+import { useTranslate } from "../../locals/useTranslate";
 
 type Props = {};
 
 const Nav = (props: Props) => {
   const theme = useTheme();
+  const { translate } = useTranslate();
 
   const [activeNav, setActiveNav] = useState(1);
   const [activeChildNav, setActiveChildNav] = useState<null | number>(null);
@@ -71,7 +73,7 @@ const Nav = (props: Props) => {
                   {/* <MenuItemMainIcon></MenuItemMainIcon> */}
                   {item.id === activeNav ? item.activeIcon : item.icon}
                   <MenuItemMainText $isActive={item.id === activeNav}>
-                    {item.title}
+                    {translate(item.title)}
                   </MenuItemMainText>
                 </MenuItemMainLeft>
                 {item.childs?.length > 0 && (
@@ -96,7 +98,9 @@ const Nav = (props: Props) => {
                       $isActive={childItem.id === activeChildNav}
                     >
                       <ChildItemDot></ChildItemDot>
-                      <ChildItemText>{childItem.title}</ChildItemText>
+                      <ChildItemText>
+                        {translate(childItem.title)}
+                      </ChildItemText>
                     </MenuItemChildItem>
                   ))}
                 </MenuItemChilds>

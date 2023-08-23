@@ -19,6 +19,7 @@ import Sun1 from "../../assets/Sun1";
 import Moon1 from "../../assets/Moon1";
 import { languages } from "../../locals/languages";
 import { useTheme } from "styled-components";
+import i18n from "../../locals/i18n";
 
 type Props = {
   changeTheme: Function;
@@ -29,9 +30,15 @@ const Header = ({ changeTheme, themeIndex }: Props) => {
   const theme = useTheme();
 
   const [languageIsActive, setLanguageIsActive] = useState(false);
+  const [language, setLanguage] = useState("En");
 
   const activeLanguageHandler = () => {
     setLanguageIsActive((state) => !state);
+  };
+
+  const changeLanguage = (value: string) => {
+    i18n.changeLanguage(value.toLowerCase());
+    setLanguage(value);
   };
   return (
     <Box>
@@ -40,12 +47,14 @@ const Header = ({ changeTheme, themeIndex }: Props) => {
       </SearchBoxContainer>
       <ButtonsContainer>
         <Language onClick={activeLanguageHandler}>
-          <LanguageText>En</LanguageText>
+          <LanguageText>{language}</LanguageText>
           <ArrowDown1 width="12px" color={theme.colors.surfaceText} />
           {languageIsActive && (
             <LanguageItems>
               {languages.map((item, index) => (
-                <LanguageItem key={index}>{item}</LanguageItem>
+                <LanguageItem key={index} onClick={() => changeLanguage(item)}>
+                  {item}
+                </LanguageItem>
               ))}
             </LanguageItems>
           )}
