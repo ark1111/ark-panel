@@ -46,14 +46,18 @@ export const ThemeMode = styled.div`
   overflow: hidden;
 `;
 
-export const ThemeModeBox = styled.div<{ $modeIndex: number }>`
+export const ThemeModeBox = styled.div<{ $modeIndex: number; $isRtl: boolean }>`
   width: 100px;
   height: 50px;
   display: flex;
   align-items: center;
   transition: all 0.5s;
   transform: ${(props) =>
-    props.$modeIndex === 0 ? "translateX(0px)" : "translateX(-50px)"};
+    props.$modeIndex === 0
+      ? "translateX(0px)"
+      : props.$isRtl
+      ? "translateX(50px)"
+      : "translateX(-50px)"};
 `;
 
 export const ThemeModeBoxItem = styled.div`
@@ -100,7 +104,7 @@ export const LanguageItem = styled.div`
   width: 100%;
   padding: 10px 5px;
   font-size: 14px;
-  color: ${(props) => props.theme.colors.surfaceText};;
+  color: ${(props) => props.theme.colors.surfaceText};
   cursor: pointer;
   text-align: center;
 `;

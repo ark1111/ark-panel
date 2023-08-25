@@ -62,7 +62,7 @@ const Header = ({ changeTheme, themeIndex, language, setLanguage }: Props) => {
           )}
         </Language>
         <ThemeMode onClick={() => changeTheme()}>
-          <ThemeModeBox $modeIndex={themeIndex}>
+          <ThemeModeBox $modeIndex={themeIndex} $isRtl={language === "Fa"}>
             <ThemeModeBoxItem>
               <Sun1 />
             </ThemeModeBoxItem>
