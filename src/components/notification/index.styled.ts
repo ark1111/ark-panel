@@ -30,6 +30,7 @@ export const Box = styled.div`
   box-shadow: 0px 0px 19px -4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   animation: ${toggle} 0.5s ease-in-out normal;
+  transition: all 0.5s ease-in-out;
 `;
 
 // -webkit-box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.67);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { BackSurface, Box } from "./index.styled";
 
 type Props = {
@@ -6,9 +6,13 @@ type Props = {
 };
 
 const NotificationBox = ({ hideNotificationHandler }: Props) => {
+  const boxRef = useRef<any>();
   const hideNotification = (e: React.MouseEvent) => {
     e.stopPropagation();
-    hideNotificationHandler();
+    boxRef.current.style.transform = "translateX(400px)";
+    setTimeout(() => {
+      hideNotificationHandler();
+    }, 500);
   };
 
   const insideClick = (e: React.MouseEvent) => {
@@ -17,7 +21,7 @@ const NotificationBox = ({ hideNotificationHandler }: Props) => {
 
   return (
     <BackSurface onClick={(e) => hideNotification(e)}>
-      <Box onClick={(e) => insideClick(e)}></Box>
+      <Box ref={boxRef} onClick={(e) => insideClick(e)}></Box>
     </BackSurface>
   );
 };
