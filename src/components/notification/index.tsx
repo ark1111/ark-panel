@@ -1,10 +1,25 @@
 import React from "react";
-import { Box } from "./index.styled";
+import { BackSurface, Box } from "./index.styled";
 
-type Props = {};
+type Props = {
+  hideNotificationHandler: Function;
+};
 
-const NotificationBox = (props: Props) => {
-  return <Box></Box>;
+const NotificationBox = ({ hideNotificationHandler }: Props) => {
+  const hideNotification = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    hideNotificationHandler();
+  };
+
+  const insideClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
+  return (
+    <BackSurface onClick={(e) => hideNotification(e)}>
+      <Box onClick={(e) => insideClick(e)}></Box>
+    </BackSurface>
+  );
 };
 
 export default NotificationBox;

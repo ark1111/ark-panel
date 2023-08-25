@@ -10,6 +10,15 @@ const toggle = keyframes`
   }
 `;
 
+export const BackSurface = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+`;
+
 export const Box = styled.div`
   width: 400px;
   height: 100vh;
@@ -20,9 +29,8 @@ export const Box = styled.div`
   z-index: 30;
   box-shadow: 0px 0px 19px -4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  animation: ${toggle} 0.5s ease-in-out alternate;
+  animation: ${toggle} 0.5s ease-in-out normal;
 `;
-
 
 // -webkit-box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.67);
 // -moz-box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.67);

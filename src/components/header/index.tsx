@@ -46,7 +46,11 @@ const Header = ({ changeTheme, themeIndex, language, setLanguage }: Props) => {
   };
 
   const showNotificationHandler = () => {
-    setShowNotification((state) => !state);
+    setShowNotification(true);
+  };
+
+  const hideNotificationHandler = () => {
+    setShowNotification(false);
   };
   return (
     <Box>
@@ -81,7 +85,7 @@ const Header = ({ changeTheme, themeIndex, language, setLanguage }: Props) => {
           <Notification1 />
         </Notification>
       </ButtonsContainer>
-      {showNotification && <NotificationBox />}
+      {showNotification && <NotificationBox hideNotificationHandler={hideNotificationHandler} />}
     </Box>
   );
 };
