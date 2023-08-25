@@ -115,10 +115,10 @@ const Nav = (props: Props) => {
         <ProfileSubText>alireza.khaji11@gmail.com</ProfileSubText>
         <ProfileButtons>
           <ProfileButtonItem>
-            <Setting1 />
+            <Setting1 color1="#BBBBBB" color2="#666666"/>
           </ProfileButtonItem>
           <ProfileButtonItem>
-            <Logout1 />
+            <Logout1 color1="#BBBBBB" color2="#666666"/>
           </ProfileButtonItem>
         </ProfileButtons>
       </Profile>

@@ -15,7 +15,7 @@ export const MenuList: {
   {
     id: 1,
     title: "Dashboard",
-    icon: <Home1 width="25px" />,
+    icon: <Home1 width="25px" color1="#BBBBBB" color2="#666666" />,
     activeIcon: <Home1 width="25px" color2="#a8a8a8" color1="#fff" />,
     childs: [],
     link: "",

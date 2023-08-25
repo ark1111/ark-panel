@@ -20,6 +20,7 @@ import Moon1 from "../../assets/Moon1";
 import { languages } from "../../locals/languages";
 import { useTheme } from "styled-components";
 import i18n from "../../locals/i18n";
+import NotificationBox from "../notification";
 
 type Props = {
   changeTheme: Function;
@@ -32,6 +33,7 @@ const Header = ({ changeTheme, themeIndex, language, setLanguage }: Props) => {
   const theme = useTheme();
 
   const [languageIsActive, setLanguageIsActive] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
 
   const activeLanguageHandler = () => {
     setLanguageIsActive((state) => !state);
@@ -41,6 +43,10 @@ const Header = ({ changeTheme, themeIndex, language, setLanguage }: Props) => {
     i18n.changeLanguage(value.toLowerCase());
     setLanguage(value);
     localStorage.setItem("language", value);
+  };
+
+  const showNotificationHandler = () => {
+    setShowNotification((state) => !state);
   };
   return (
     <Box>
@@ -71,10 +77,11 @@ const Header = ({ changeTheme, themeIndex, language, setLanguage }: Props) => {
             </ThemeModeBoxItem>
           </ThemeModeBox>
         </ThemeMode>
-        <Notification>
+        <Notification onClick={showNotificationHandler}>
           <Notification1 />
         </Notification>
       </ButtonsContainer>
+      {showNotification && <NotificationBox />}
     </Box>
   );
 };
