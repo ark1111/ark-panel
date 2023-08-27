@@ -4,8 +4,9 @@ export const light = {
     background: "#eeeeee",
     primary: "#111111",
     surface: "#ffffff",
-    surfaceText:"#111111",
-    border:"#E1E1E1"
+    surfaceText: "#111111",
+    surfaceTextLight: "#11111199",
+    border: "#E1E1E1",
   },
 };
 
@@ -15,7 +16,8 @@ export const dark = {
     background: "#101116",
     primary: "#2F3148BB",
     surface: "#2F314855",
-    surfaceText:"#ffffff",
-    border:"#E1E1E133"
+    surfaceText: "#ffffff",
+    surfaceTextLight: "#ffffff99",
+    border: "#E1E1E133",
   },
 };

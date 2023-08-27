@@ -1,5 +1,14 @@
 import React, { useRef } from "react";
-import { BackSurface, Box } from "./index.styled";
+import {
+  BackSurface,
+  Box,
+  Header,
+  List,
+  ListItem,
+  Title,
+} from "./index.styled";
+import { notifList } from "./data";
+import NotifItem from "./NotifItem";
 
 type Props = {
   hideNotificationHandler: Function;
@@ -21,7 +30,18 @@ const NotificationBox = ({ hideNotificationHandler }: Props) => {
 
   return (
     <BackSurface onClick={(e) => hideNotification(e)}>
-      <Box ref={boxRef} onClick={(e) => insideClick(e)}></Box>
+      <Box ref={boxRef} onClick={(e) => insideClick(e)}>
+        <Header>
+          <Title>Notification</Title>
+        </Header>
+        <List>
+          {notifList.map((item, index) => (
+            <ListItem key={item.id}>
+              <NotifItem />
+            </ListItem>
+          ))}
+        </List>
+      </Box>
     </BackSurface>
   );
 };

@@ -33,6 +33,31 @@ export const Box = styled.div`
   transition: all 0.5s ease-in-out;
 `;
 
-// -webkit-box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.67);
-// -moz-box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.67);
-// box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.67);
+// -webkit-box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.67)
+// -moz-box-shadow: 0px 0px 19px -4px rgba(0,0,0,0.67)
+
+export const Header = styled.div`
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  border-color: ${(props) => props.theme.colors.border};
+`;
+
+export const Title = styled.div`
+  font-size: 20px;
+  color: ${(props) => props.theme.colors.surfaceText};
+`;
+
+export const List = styled.div`
+  width: 100%;
+  height: calc(100% - 80px);
+  overflow: auto;
+`;
+
+export const ListItem = styled.div`
+  width: 100%;
+`;
