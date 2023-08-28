@@ -10,6 +10,16 @@ const toggle = keyframes`
   }
 `;
 
+const toggle_rtl = keyframes`
+  from {
+    transform: translateX(-400px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+`;
+
 export const BackSurface = styled.div`
   width: 100vw;
   height: 100vh;
@@ -19,17 +29,19 @@ export const BackSurface = styled.div`
   top: 0;
 `;
 
-export const Box = styled.div`
+export const Box = styled.div<{ $isRtl: boolean }>`
   width: 400px;
   height: 100vh;
   background-color: ${(props) => props.theme.colors.surface};
   position: fixed;
-  right: 0;
+  right: ${(props) => (props.$isRtl ? "initial" : "0px")};
+  left: ${(props) => (props.$isRtl ? "0px" : "initial")};
   top: 0;
   z-index: 30;
   box-shadow: 0px 0px 19px -4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  animation: ${toggle} 0.5s ease-in-out normal;
+  animation: ${(props) => (props.$isRtl ? toggle_rtl : toggle)} 0.5s ease-in-out
+    normal;
   transition: all 0.5s ease-in-out;
 `;
 
@@ -56,6 +68,15 @@ export const List = styled.div`
   width: 100%;
   height: calc(100% - 80px);
   overflow: auto;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: ${(props) => props.theme.colors.primaryLight};
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 export const ListItem = styled.div`

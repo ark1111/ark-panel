@@ -3,6 +3,7 @@ export const light = {
   colors: {
     background: "#eeeeee",
     primary: "#111111",
+    primaryLight: "#111111AA",
     surface: "#ffffff",
     surfaceText: "#111111",
     surfaceTextLight: "#11111199",

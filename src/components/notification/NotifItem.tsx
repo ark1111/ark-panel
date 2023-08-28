@@ -1,13 +1,20 @@
-import { Box,Avatar, Content, Time } from "./NotifItem.styled";
+import { Box, Avatar, Content, Time } from "./NotifItem.styled";
 
-type Props = {};
+type Props = {
+  info: {
+    id: number;
+    avatar: string;
+    createdAt: string;
+    description: string;
+  };
+};
 
-const NotifItem = (props: Props) => {
+const NotifItem = ({ info }: Props) => {
   return (
     <Box>
       <Avatar></Avatar>
-      <Content>Some text</Content>
-      <Time>Now</Time>
+      <Content>{info.description}</Content>
+      <Time>{info.createdAt}</Time>
     </Box>
   );
 };

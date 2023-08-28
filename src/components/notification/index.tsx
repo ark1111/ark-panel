@@ -9,16 +9,21 @@ import {
 } from "./index.styled";
 import { notifList } from "./data";
 import NotifItem from "./NotifItem";
+import { useTranslate } from "../../locals/useTranslate";
 
 type Props = {
   hideNotificationHandler: Function;
 };
 
 const NotificationBox = ({ hideNotificationHandler }: Props) => {
+  const { translate, language } = useTranslate();
+
   const boxRef = useRef<any>();
   const hideNotification = (e: React.MouseEvent) => {
     e.stopPropagation();
-    boxRef.current.style.transform = "translateX(400px)";
+    let translateValue =
+      language === "fa" ? "translateX(-400px)" : "translateX(400px)";
+    boxRef.current.style.transform = translateValue;
     setTimeout(() => {
       hideNotificationHandler();
     }, 500);
@@ -30,14 +35,18 @@ const NotificationBox = ({ hideNotificationHandler }: Props) => {
 
   return (
     <BackSurface onClick={(e) => hideNotification(e)}>
-      <Box ref={boxRef} onClick={(e) => insideClick(e)}>
+      <Box
+        ref={boxRef}
+        onClick={(e) => insideClick(e)}
+        $isRtl={language === "fa"}
+      >
         <Header>
-          <Title>Notification</Title>
+          <Title>{translate("Notification")}</Title>
         </Header>
         <List>
           {notifList.map((item, index) => (
             <ListItem key={item.id}>
-              <NotifItem />
+              <NotifItem info={item} />
             </ListItem>
           ))}
         </List>
