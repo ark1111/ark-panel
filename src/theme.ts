@@ -15,8 +15,11 @@ export const dark = {
   name: "dark-theme",
   colors: {
     background: "#101116",
-    primary: "#2F3148BB",
-    surface: "#2F314855",
+    // primary: "#2F3148BB",
+    primary:"#282B3F",
+    primaryLight: "#282B3F77",
+    // surface: "#2F314855",
+    surface:"#191B26",
     surfaceText: "#ffffff",
     surfaceTextLight: "#ffffff99",
     border: "#E1E1E133",

@@ -14,3 +14,19 @@ export const Page = styled.div`
   width: calc(100% - 400px);
   height: 100%;
 `;
+
+export const Content = styled.div`
+  width: 100%;
+  max-height: calc(100% - 140px);
+  margin: 20px 0px;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: ${(props) => props.theme.colors.primaryLight};
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
+`;

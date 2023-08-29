@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Page } from "./app.styled";
+import { Container, Content, Page } from "./app.styled";
 import Header from "./components/header";
 import Nav from "./components/nav";
 import { light, dark } from "./theme";
@@ -34,6 +34,9 @@ function App() {
             language={language}
             setLanguage={setLanguage}
           ></Header>
+          <Content>
+            <div style={{ width: "100%", height: "130vh",background:'yellow' }}>h</div>
+          </Content>
         </Page>
       </Container>
     </ThemeProvider>
