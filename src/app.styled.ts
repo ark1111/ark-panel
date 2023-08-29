@@ -15,11 +15,18 @@ export const Page = styled.div`
   height: 100%;
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<{
+  $scrollIsActive: boolean;
+  $isRtl: boolean;
+}>`
   width: 100%;
   max-height: calc(100% - 140px);
   margin: 20px 0px;
   overflow-y: auto;
+  padding-right: ${(props) =>
+    !props.$isRtl && props.$scrollIsActive ? "20px" : "0px"};
+  padding-left: ${(props) =>
+    props.$isRtl && props.$scrollIsActive ? "20px" : "0px"};
   &::-webkit-scrollbar {
     width: 7px;
   }
