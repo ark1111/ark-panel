@@ -5,6 +5,8 @@ import Nav from "./components/nav";
 import { light, dark } from "./theme";
 import { ThemeProvider } from "styled-components";
 import i18n from "./locals/i18n";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/router";
 
 const themeList = [light, dark];
 
@@ -51,11 +53,7 @@ function App() {
             $scrollIsActive={scrollIsActive}
             $isRtl={language === "Fa" ? true : false}
           >
-            <div
-              style={{ width: "100%", height: "130vh", background: "yellow" }}
-            >
-              h
-            </div>
+            <RouterProvider router={router} />
           </Content>
         </Page>
       </Container>
