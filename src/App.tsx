@@ -5,8 +5,8 @@ import Nav from "./components/nav";
 import { light, dark } from "./theme";
 import { ThemeProvider } from "styled-components";
 import i18n from "./locals/i18n";
-import { RouterProvider } from "react-router-dom";
-import { router } from "./router/router";
+import { BrowserRouter } from "react-router-dom";
+import RouterConfig from "./router/RouterConfig";
 
 const themeList = [light, dark];
 
@@ -39,24 +39,26 @@ function App() {
   };
   return (
     <ThemeProvider theme={themeList[themeIndex]}>
-      <Container $direction={language === "Fa" ? "rtl" : "ltr"}>
-        <Nav></Nav>
-        <Page>
-          <Header
-            changeTheme={changeTheme}
-            themeIndex={themeIndex}
-            language={language}
-            setLanguage={setLanguage}
-          ></Header>
-          <Content
-            ref={contentRef}
-            $scrollIsActive={scrollIsActive}
-            $isRtl={language === "Fa" ? true : false}
-          >
-            <RouterProvider router={router} />
-          </Content>
-        </Page>
-      </Container>
+      <BrowserRouter>
+        <Container $direction={language === "Fa" ? "rtl" : "ltr"}>
+          <Nav></Nav>
+          <Page>
+            <Header
+              changeTheme={changeTheme}
+              themeIndex={themeIndex}
+              language={language}
+              setLanguage={setLanguage}
+            ></Header>
+            <Content
+              ref={contentRef}
+              $scrollIsActive={scrollIsActive}
+              $isRtl={language === "Fa" ? true : false}
+            >
+              <RouterConfig />
+            </Content>
+          </Page>
+        </Container>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

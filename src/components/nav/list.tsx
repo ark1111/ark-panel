@@ -18,7 +18,7 @@ export const MenuList: {
     icon: <Home1 width="25px" color1="#BBBBBB" color2="#666666" />,
     activeIcon: <Home1 width="25px" color2="#a8a8a8" color1="#fff" />,
     childs: [],
-    link: "",
+    link: "/",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ export const MenuList: {
     icon: null,
     activeIcon: null,
     childs: [],
-    link: "",
+    link: "#",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ export const MenuList: {
     icon: null,
     activeIcon: null,
     childs: [],
-    link: "",
+    link: "#",
   },
   {
     id: 4,
@@ -45,15 +45,15 @@ export const MenuList: {
       {
         id: 4,
         title: "subset1",
-        link: "",
+        link: "#",
       },
       {
         id: 5,
         title: "subset2",
-        link: "",
+        link: "#",
       },
     ],
-    link: "",
+    link: "#",
   },
   // {
   //     id:0,

@@ -28,6 +28,7 @@ import Setting1 from "../../assets/Setting1";
 import Logout1 from "../../assets/Logout1";
 import { useTheme } from "styled-components";
 import { useTranslate } from "../../locals/useTranslate";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -65,43 +66,47 @@ const Nav = (props: Props) => {
         <Menu>
           {MenuList.map((item, index) => (
             <MenuItem key={item.id}>
-              <MenuItemMain
-                $isActive={item.id === activeNav}
-                onClick={() => changeNav(item.id, index)}
-              >
-                <MenuItemMainLeft>
-                  {/* <MenuItemMainIcon></MenuItemMainIcon> */}
-                  {item.id === activeNav ? item.activeIcon : item.icon}
-                  <MenuItemMainText $isActive={item.id === activeNav}>
-                    {translate(item.title)}
-                  </MenuItemMainText>
-                </MenuItemMainLeft>
-                {item.childs?.length > 0 && (
-                  <ToggleIcon $isActive={item.id === activeToggleId}>
-                    <ArrowDown1
-                      width="12px"
-                      color={
-                        item.id === activeNav
-                          ? "#fff"
-                          : theme.colors.surfaceText
-                      }
-                    />
-                  </ToggleIcon>
-                )}
-              </MenuItemMain>
+              <Link to={item.link}>
+                <MenuItemMain
+                  $isActive={item.id === activeNav}
+                  onClick={() => changeNav(item.id, index)}
+                >
+                  <MenuItemMainLeft>
+                    {/* <MenuItemMainIcon></MenuItemMainIcon> */}
+                    {item.id === activeNav ? item.activeIcon : item.icon}
+                    <MenuItemMainText $isActive={item.id === activeNav}>
+                      {translate(item.title)}
+                    </MenuItemMainText>
+                  </MenuItemMainLeft>
+                  {item.childs?.length > 0 && (
+                    <ToggleIcon $isActive={item.id === activeToggleId}>
+                      <ArrowDown1
+                        width="12px"
+                        color={
+                          item.id === activeNav
+                            ? "#fff"
+                            : theme.colors.surfaceText
+                        }
+                      />
+                    </ToggleIcon>
+                  )}
+                </MenuItemMain>
+              </Link>
               {item.childs?.length > 0 && (
                 <MenuItemChilds $isActive={item.id === activeToggleId}>
                   {item.childs.map((childItem) => (
-                    <MenuItemChildItem
-                      key={childItem.id}
-                      onClick={() => childchangeNav(item.id, childItem.id)}
-                      $isActive={childItem.id === activeChildNav}
-                    >
-                      <ChildItemDot></ChildItemDot>
-                      <ChildItemText>
-                        {translate(childItem.title)}
-                      </ChildItemText>
-                    </MenuItemChildItem>
+                    <Link to={childItem.link}>
+                      <MenuItemChildItem
+                        key={childItem.id}
+                        onClick={() => childchangeNav(item.id, childItem.id)}
+                        $isActive={childItem.id === activeChildNav}
+                      >
+                        <ChildItemDot></ChildItemDot>
+                        <ChildItemText>
+                          {translate(childItem.title)}
+                        </ChildItemText>
+                      </MenuItemChildItem>
+                    </Link>
                   ))}
                 </MenuItemChilds>
               )}
@@ -115,10 +120,10 @@ const Nav = (props: Props) => {
         <ProfileSubText>alireza.khaji11@gmail.com</ProfileSubText>
         <ProfileButtons>
           <ProfileButtonItem>
-            <Setting1 color1="#BBBBBB" color2="#666666"/>
+            <Setting1 color1="#BBBBBB" color2="#666666" />
           </ProfileButtonItem>
           <ProfileButtonItem>
-            <Logout1 color1="#BBBBBB" color2="#666666"/>
+            <Logout1 color1="#BBBBBB" color2="#666666" />
           </ProfileButtonItem>
         </ProfileButtons>
       </Profile>
