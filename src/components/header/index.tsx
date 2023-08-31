@@ -74,18 +74,28 @@ const Header = ({ changeTheme, themeIndex, language, setLanguage }: Props) => {
         <ThemeMode onClick={() => changeTheme()}>
           <ThemeModeBox $modeIndex={themeIndex} $isRtl={language === "Fa"}>
             <ThemeModeBoxItem>
-              <Sun1 />
+              <Sun1
+                color1={theme.colors.iconColor1} color2={theme.colors.iconColor2}
+              />
             </ThemeModeBoxItem>
             <ThemeModeBoxItem>
-              <Moon1 />
+              <Moon1
+                color1={theme.colors.iconColor1}
+                color2={theme.colors.iconColor2}
+              />
             </ThemeModeBoxItem>
           </ThemeModeBox>
         </ThemeMode>
         <Notification onClick={showNotificationHandler}>
-          <Notification1 />
+          <Notification1
+            color1={theme.colors.iconColor1}
+            color2={theme.colors.iconColor2}
+          />
         </Notification>
       </ButtonsContainer>
-      {showNotification && <NotificationBox hideNotificationHandler={hideNotificationHandler} />}
+      {showNotification && (
+        <NotificationBox hideNotificationHandler={hideNotificationHandler} />
+      )}
     </Box>
   );
 };

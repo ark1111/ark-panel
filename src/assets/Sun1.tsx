@@ -17,7 +17,7 @@ const Sun1 = ({ width, color1, color2 }: Props) => {
         cx="10.05"
         cy="9.87"
         r="5.22"
-        style={{ fill: color2 || "#a8a8a8" }}
+        style={{ fill: color1 || "#a8a8a8" }}
       />
       <rect
         x="9.4"
