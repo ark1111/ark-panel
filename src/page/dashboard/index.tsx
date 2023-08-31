@@ -1,14 +1,24 @@
+import {
+  Container,
+  Section1,
+  SectionPart1,
+  SectionPart2,
+} from "./index.styled";
+import Offers from "./components/Offers";
 
-
-
-import React from 'react'
-
-type Props = {}
+type Props = {};
 
 const Dashboard = (props: Props) => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <Container>
+      <Section1>
+        <SectionPart1>
+          <Offers />
+        </SectionPart1>
+        <SectionPart2></SectionPart2>
+      </Section1>
+    </Container>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

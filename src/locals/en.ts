@@ -2,6 +2,8 @@ export const enLocal = {
   translation: {
     title: "title",
     dashboard:'Dashboard',
-    notification:'Notification'
+    notification:'Notification',
+    offers:"Offers",
+    all:'All'
   },
 };
