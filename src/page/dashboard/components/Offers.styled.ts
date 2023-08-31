@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const Box = styled.div`
   width: 100%;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   background-color: ${(props) => props.theme.colors.surface};
 `;
 
@@ -65,12 +65,25 @@ export const ListItemInfo = styled.div`
   flex: 1;
 `;
 
-export const ListItemPoint = styled.div`
+export const ListItemTitle = styled.div`
+  font-size: 18px;
+  color: ${(props) => props.theme.colors.surfaceText};
+`;
+
+export const ListItemSubitle = styled.div`
+  font-size: 14px;
+  color: ${(props) => props.theme.colors.surfaceTextLight};
+`;
+
+export const ListItemPoint = styled.div<{ $color: string }>`
   width: 60px;
   height: 60px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.theme.colors.primary};
+  font-size: 18px;
+  background-color: ${(props) => props.$color + "33"};
+  color: ${(props) => props.$color};
+  user-select: none;
 `;
