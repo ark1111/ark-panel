@@ -7,6 +7,7 @@ import {
   HeaderTitle,
   List,
   ListItem,
+  ListItemImage,
   ListItemImageBox,
   ListItemInfo,
   ListItemPoint,
@@ -46,7 +47,9 @@ const Offers = (props: Props) => {
       <List>
         {data.map((item) => (
           <ListItem key={item?.id}>
-            <ListItemImageBox></ListItemImageBox>
+            <ListItemImageBox>
+              <ListItemImage src={item.image}></ListItemImage>
+            </ListItemImageBox>
             <ListItemInfo>
               <ListItemTitle>{item.title}</ListItemTitle>
               <ListItemSubitle>{item.subtitle}</ListItemSubitle>
