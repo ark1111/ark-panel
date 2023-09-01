@@ -122,6 +122,12 @@ export const ProfileAvatar = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
 `;
 
+export const ProfileAvatarImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 export const ProfileText = styled.div`
   font-size: 22px;
   color: ${(props) => props.theme.colors.surfaceText};

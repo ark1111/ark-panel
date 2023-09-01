@@ -15,6 +15,7 @@ import {
   MenuItemMainText,
   Profile,
   ProfileAvatar,
+  ProfileAvatarImage,
   ProfileButtonItem,
   ProfileButtons,
   ProfileSubText,
@@ -115,7 +116,9 @@ const Nav = (props: Props) => {
         </Menu>
       </TopPart>
       <Profile>
-        <ProfileAvatar></ProfileAvatar>
+        <ProfileAvatar>
+          <ProfileAvatarImage src="/assets/images/mock/sample-avatar-1.png"></ProfileAvatarImage>
+        </ProfileAvatar>
         <ProfileText>Alireza</ProfileText>
         <ProfileSubText>alireza.khaji11@gmail.com</ProfileSubText>
         <ProfileButtons>

@@ -3,99 +3,57 @@
 export const notifList = [
     {
         id:1,
-        avatar:"",
+        avatar:"/assets/images/mock/sample-avatar-2.png",
         createdAt:"Now",
         description:"some text"
     },
     {
         id:2,
-        avatar:"",
+        avatar:"/assets/images/mock/sample-avatar-3.png",
         createdAt:"Now",
         description:"some text"
     },
     {
         id:3,
-        avatar:"",
+        avatar:"/assets/images/mock/sample-avatar-2.png",
         createdAt:"Now",
         description:"some text"
     },
     {
         id:4,
-        avatar:"",
+        avatar:"/assets/images/mock/sample-avatar-3.png",
         createdAt:"Now",
         description:"some text"
     },
     {
         id:5,
-        avatar:"",
+        avatar:"/assets/images/mock/sample-avatar-2.png",
         createdAt:"Now",
         description:"some text"
     },
     {
         id:6,
-        avatar:"",
+        avatar:"/assets/images/mock/sample-avatar-3.png",
         createdAt:"Now",
         description:"some text"
     },
     {
         id:7,
-        avatar:"",
+        avatar:"/assets/images/mock/sample-avatar-2.png",
         createdAt:"Now",
         description:"some text"
     },
     {
         id:8,
-        avatar:"",
+        avatar:"/assets/images/mock/sample-avatar-3.png",
         createdAt:"Now",
         description:"some text"
     },
     {
         id:9,
-        avatar:"",
+        avatar:"/assets/images/mock/sample-avatar-2.png",
         createdAt:"Now",
         description:"some text"
-    },
-    {
-        id:10,
-        avatar:"",
-        createdAt:"Now",
-        description:"some text"
-    },
-    {
-        id:11,
-        avatar:"",
-        createdAt:"Now",
-        description:"some text"
-    },
-    {
-        id:12,
-        avatar:"",
-        createdAt:"Now",
-        description:"some text"
-    },
-    {
-        id:13,
-        avatar:"",
-        createdAt:"Now",
-        description:"some text"
-    },
-    {
-        id:14,
-        avatar:"",
-        createdAt:"Now",
-        description:"some text"
-    },
-    {
-        id:15,
-        avatar:"",
-        createdAt:"Now",
-        description:"some text"
-    },
-    {
-        id:16,
-        avatar:"",
-        createdAt:"Now",
-        description:"some text"
-    },
+    }
     
 ]
