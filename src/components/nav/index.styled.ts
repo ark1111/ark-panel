@@ -78,7 +78,7 @@ export const MenuItemMainText = styled.div<{ $isActive: boolean }>`
 
 export const MenuItemChilds = styled.div<{ $isActive: boolean }>`
   width: 100%;
-  padding-inline: 50px;
+  padding-inline: 45px;
   max-height: ${(props) => (props.$isActive ? "1000px" : "0px")};
   overflow: hidden;
   transition: all 1s;

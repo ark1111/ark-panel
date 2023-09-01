@@ -1,4 +1,5 @@
 import Home1 from "../../assets/Home1";
+import SampleIcon1 from "../../assets/SampleIcon1";
 
 export const MenuList: {
   id: number;
@@ -23,24 +24,24 @@ export const MenuList: {
   {
     id: 2,
     title: "Posts",
-    icon: null,
-    activeIcon: null,
+    icon: <SampleIcon1 width="25px" color1="#BBBBBB" color2="#666666" />,
+    activeIcon: <SampleIcon1 width="25px" color2="#a8a8a8" color1="#fff" />,
     childs: [],
     link: "#",
   },
   {
     id: 3,
     title: "Inbox",
-    icon: null,
-    activeIcon: null,
+    icon: <SampleIcon1 width="25px" color1="#BBBBBB" color2="#666666" />,
+    activeIcon: <SampleIcon1 width="25px" color2="#a8a8a8" color1="#fff" />,
     childs: [],
     link: "#",
   },
   {
     id: 4,
     title: "Income",
-    icon: null,
-    activeIcon: null,
+    icon: <SampleIcon1 width="25px" color1="#BBBBBB" color2="#666666" />,
+    activeIcon: <SampleIcon1 width="25px" color2="#a8a8a8" color1="#fff" />,
     childs: [
       {
         id: 4,
