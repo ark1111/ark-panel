@@ -18,6 +18,7 @@ import { useTranslate } from "../../../locals/useTranslate";
 import { OffersList } from "./mockData";
 import ArrowRight1 from "../../../assets/ArrowRight1";
 import { useTheme } from "styled-components";
+import ArrowLeft1 from "../../../assets/ArrowLeft1";
 
 type Props = {};
 
@@ -36,7 +37,7 @@ const getStatusColor = (point: number): number => {
 };
 
 const Offers = (props: Props) => {
-  const { translate } = useTranslate();
+  const { translate, language } = useTranslate();
   const theme = useTheme();
   const [data, setData] = useState(OffersList);
 
@@ -46,11 +47,19 @@ const Offers = (props: Props) => {
         <HeaderTitle>{translate("Offers")}</HeaderTitle>
         <HeaderButton>
           <HeaderButtonText>{translate("All")}</HeaderButtonText>
-          <ArrowRight1
-            width="5px"
-            strokeWidth="2"
-            color={theme.colors.surfaceText}
-          />
+          {language === "fa" ? (
+            <ArrowLeft1
+              width="5px"
+              strokeWidth="2"
+              color={theme.colors.surfaceText}
+            />
+          ) : (
+            <ArrowRight1
+              width="5px"
+              strokeWidth="2"
+              color={theme.colors.surfaceText}
+            />
+          )}
         </HeaderButton>
       </Header>
       <List>
