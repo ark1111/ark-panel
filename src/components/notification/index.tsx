@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import {
   BackSurface,
   Box,
+  CloseButton,
   Header,
   List,
   ListItem,
@@ -10,6 +11,8 @@ import {
 import { notifList } from "./data";
 import NotifItem from "./NotifItem";
 import { useTranslate } from "../../locals/useTranslate";
+import Close1 from "../../assets/Close1";
+import { useTheme } from "styled-components";
 
 type Props = {
   hideNotificationHandler: Function;
@@ -17,6 +20,7 @@ type Props = {
 
 const NotificationBox = ({ hideNotificationHandler }: Props) => {
   const { translate, language } = useTranslate();
+  const theme = useTheme();
 
   const boxRef = useRef<any>();
   const hideNotification = (e: React.MouseEvent) => {
@@ -42,6 +46,13 @@ const NotificationBox = ({ hideNotificationHandler }: Props) => {
       >
         <Header>
           <Title>{translate("Notification")}</Title>
+          <CloseButton onClick={(e) => hideNotification(e)}>
+            <Close1
+              width="25px"
+              color1={theme.colors.iconColor1}
+              color2={theme.colors.iconColor2}
+            />
+          </CloseButton>
         </Header>
         <List>
           {notifList.map((item, index) => (

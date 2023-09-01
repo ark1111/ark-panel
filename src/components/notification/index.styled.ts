@@ -64,6 +64,10 @@ export const Title = styled.div`
   color: ${(props) => props.theme.colors.surfaceText};
 `;
 
+export const CloseButton = styled.div`
+  cursor: pointer;
+`;
+
 export const List = styled.div`
   width: 100%;
   height: calc(100% - 80px);
