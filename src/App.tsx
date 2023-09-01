@@ -40,7 +40,7 @@ function App() {
   return (
     <ThemeProvider theme={themeList[themeIndex]}>
       <BrowserRouter>
-        <Container $direction={language === "Fa" ? "rtl" : "ltr"}>
+        <Container $direction={language === "Fa" ? "rtl" : "ltr"} $language={language}>
           <Nav></Nav>
           <Page>
             <Header

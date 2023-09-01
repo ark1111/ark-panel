@@ -1,13 +1,23 @@
+@font-face {
+  font-family: "Vazir";
+  src: url(../public/assets/fonts/Vazir-Regular-FD.woff2) format("woff2"),
+    url(../public/assets/fonts/Vazir-Regular-FD.woff) format("woff");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: "Preahvihear", sans-serif;
+} */
+
+a {
+  text-decoration: none;
 }
 
-a{
-  text-decoration: none;
+input {
+  font-family: inherit;
 }

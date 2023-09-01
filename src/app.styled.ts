@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const Container = styled.div<{ $direction: string }>`
+export const Container = styled.div<{ $direction: string; $language: string }>`
   width: 100%;
   height: 100vh;
   padding: 20px;
@@ -8,6 +8,9 @@ export const Container = styled.div<{ $direction: string }>`
   display: flex;
   direction: ${(props) => props.$direction};
   column-gap: 20px;
+  /* font-family: "Preahvihear", sans-serif; */
+  font-family: ${(props) =>
+    props.$language === "Fa" ? "Vazir" : `"Preahvihear", sans-serif`} !important;
 `;
 
 export const Page = styled.div`
