@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Container, Content, Page } from "./app.styled";
 import Header from "./components/header";
 import Nav from "./components/nav";
@@ -34,13 +34,25 @@ function App() {
     }
   }, []);
 
+  //user default theme
+  useLayoutEffect(() => {
+    let index = localStorage.getItem("themeIndex");
+    if (index) {
+      setThemeIndex(Number(index));
+    }
+  }, []);
+
   const changeTheme = () => {
+    localStorage.setItem("themeIndex", themeIndex === 0 ? "1" : "0");
     setThemeIndex((index) => Number(!index));
   };
   return (
     <ThemeProvider theme={themeList[themeIndex]}>
       <BrowserRouter>
-        <Container $direction={language === "Fa" ? "rtl" : "ltr"} $language={language}>
+        <Container
+          $direction={language === "Fa" ? "rtl" : "ltr"}
+          $language={language}
+        >
           <Nav></Nav>
           <Page>
             <Header
