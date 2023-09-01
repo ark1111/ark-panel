@@ -19,6 +19,7 @@ import { OffersList } from "./mockData";
 import ArrowRight1 from "../../../assets/ArrowRight1";
 import { useTheme } from "styled-components";
 import ArrowLeft1 from "../../../assets/ArrowLeft1";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -45,22 +46,24 @@ const Offers = (props: Props) => {
     <Box>
       <Header>
         <HeaderTitle>{translate("Offers")}</HeaderTitle>
-        <HeaderButton>
-          <HeaderButtonText>{translate("All")}</HeaderButtonText>
-          {language === "fa" ? (
-            <ArrowLeft1
-              width="5px"
-              strokeWidth="2"
-              color={theme.colors.surfaceText}
-            />
-          ) : (
-            <ArrowRight1
-              width="5px"
-              strokeWidth="2"
-              color={theme.colors.surfaceText}
-            />
-          )}
-        </HeaderButton>
+        <Link to="#">
+          <HeaderButton>
+            <HeaderButtonText>{translate("All")}</HeaderButtonText>
+            {language === "fa" ? (
+              <ArrowLeft1
+                width="5px"
+                strokeWidth="2"
+                color={theme.colors.surfaceText}
+              />
+            ) : (
+              <ArrowRight1
+                width="5px"
+                strokeWidth="2"
+                color={theme.colors.surfaceText}
+              />
+            )}
+          </HeaderButton>
+        </Link>
       </Header>
       <List>
         {data.map((item) => (
