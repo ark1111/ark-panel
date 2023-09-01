@@ -23,7 +23,7 @@ export const MenuList: {
   },
   {
     id: 2,
-    title: "Posts",
+    title: "Sample",
     icon: <SampleIcon1 width="25px" color1="#BBBBBB" color2="#666666" />,
     activeIcon: <SampleIcon1 width="25px" color2="#a8a8a8" color1="#fff" />,
     childs: [],
@@ -31,7 +31,7 @@ export const MenuList: {
   },
   {
     id: 3,
-    title: "Inbox",
+    title: "Sample",
     icon: <SampleIcon1 width="25px" color1="#BBBBBB" color2="#666666" />,
     activeIcon: <SampleIcon1 width="25px" color2="#a8a8a8" color1="#fff" />,
     childs: [],
@@ -39,7 +39,7 @@ export const MenuList: {
   },
   {
     id: 4,
-    title: "Income",
+    title: "Sample",
     icon: <SampleIcon1 width="25px" color1="#BBBBBB" color2="#666666" />,
     activeIcon: <SampleIcon1 width="25px" color2="#a8a8a8" color1="#fff" />,
     childs: [
