@@ -1,9 +1,13 @@
 export const faLocal = {
   translation: {
-    title: "عنوان",
+    all: "همه",
     dashboard: "داشبورد",
+    day: "روز",
+    events: "رویدادها",
     notification: "اعلانات",
-    offers:"پیشنهادات",
-    all:'همه'
+    offers: "پیشنهادات",
+    sample: "نمونه",
+    title: "عنوان",
+    week: "هفته",
   },
 };

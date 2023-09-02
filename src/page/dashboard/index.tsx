@@ -5,6 +5,7 @@ import {
   SectionPart2,
 } from "./index.styled";
 import Offers from "./components/Offers";
+import Events from "./components/Events";
 
 type Props = {};
 
@@ -15,7 +16,9 @@ const Dashboard = (props: Props) => {
         <SectionPart1>
           <Offers />
         </SectionPart1>
-        <SectionPart2></SectionPart2>
+        <SectionPart2>
+          <Events />
+        </SectionPart2>
       </Section1>
     </Container>
   );
