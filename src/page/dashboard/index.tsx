@@ -5,7 +5,8 @@ import {
   SectionPart2,
 } from "./index.styled";
 import Offers from "./components/Offers";
-import Events from "./components/Events";
+import Events from "./components/events/Events";
+
 
 type Props = {};
 
