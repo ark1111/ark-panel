@@ -35,7 +35,7 @@ export const TabButtonItem = styled.div<{ $isActive: boolean }>`
   font-weight: ${(props) => (props.$isActive ? "600" : "normal")};
   color: ${(props) =>
     props.$isActive
-      ? props.theme.colors.primary
+      ? props.theme.colors.surfaceText
       : props.theme.colors.surfaceTextLight};
   cursor: pointer;
 `;

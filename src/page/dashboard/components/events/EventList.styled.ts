@@ -1,10 +1,19 @@
 import { styled } from "styled-components";
 
-export const List = styled.div`
+export const List = styled.div<{ $activeScrollbar: boolean }>`
   width: 100%;
   max-height: 300px;
-  overflow-y: auto;
+  overflow-y: ${(props) => (props.$activeScrollbar ? "auto" : "hidden")};
   margin-top: 10px;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: ${(props) => props.theme.colors.primaryLight};
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 export const ListItem = styled.div`

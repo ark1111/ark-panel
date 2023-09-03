@@ -18,8 +18,20 @@ type Props = {};
 
 const EventList = (props: Props) => {
   const [events, setEvents] = useState(eventsList);
+  const [activeScrollbar, setActiveScrollbar] = useState(false);
+
+  const activeScrollbarHandler = () => {
+    setActiveScrollbar(true);
+  };
+  const deactiveScrollbarHandler = () => {
+    setActiveScrollbar(false);
+  };
   return (
-    <List>
+    <List
+      $activeScrollbar={activeScrollbar}
+      onMouseEnter={activeScrollbarHandler}
+      onMouseLeave={deactiveScrollbarHandler}
+    >
       {events.map((item) => (
         <ListItem key={item.id}>
           <ListItemTimeAndDate>
