@@ -4,14 +4,19 @@ export const Box = styled.div`
   display: flex;
 `;
 
-export const BoxItem = styled.div<{ $width?: string; $index: number }>`
+export const BoxItem = styled.div<{
+  $width?: string;
+  $index: number;
+  $isRtl: boolean;
+}>`
   width: ${(props) => props.$width || "40px"};
   aspect-ratio: 1/1;
   border-radius: 100px;
   overflow: hidden;
   border: 2px solid;
   border-color: ${(props) => props.theme.colors.background};
-  transform: ${(props) => `translateX(-${props.$index * 10}px)`};
+  transform: ${(props) =>
+    `translateX(${props.$index * 10 * (props.$isRtl ? 1 : -1)}px)`};
 `;
 
 export const Image = styled.img`
@@ -20,7 +25,11 @@ export const Image = styled.img`
   object-fit: cover;
 `;
 
-export const MoreBox = styled.div<{ $width?: string; $amount: number }>`
+export const MoreBox = styled.div<{
+  $width?: string;
+  $amount: number;
+  $isRtl: boolean;
+}>`
   width: ${(props) => props.$width || "40px"};
   aspect-ratio: 1/1;
   border-radius: 100px;
@@ -30,8 +39,10 @@ export const MoreBox = styled.div<{ $width?: string; $amount: number }>`
   font-size: 14px;
   border: 2px solid;
   border-color: ${(props) => props.theme.colors.background};
-  transform: ${(props) => `translateX(-${props.$amount * 10}px)`};
+  transform: ${(props) =>
+    `translateX(${props.$amount * 10 * (props.$isRtl ? 1 : -1)}px)`};
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.primaryText};
-  direction: "ltr";
+  direction: "ltr" !important;
+  text-align: left !important;
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, BoxItem, Image, MoreBox } from "./index.styled";
+import { useTranslate } from "../../locals/useTranslate";
 
 type Props = {
   list: {
@@ -11,19 +12,29 @@ type Props = {
 };
 
 const AvatarGroup = ({ list, limit, avatarWidth }: Props) => {
+  const { language } = useTranslate();
   return (
     <Box>
       {list.map((item, index) => (
         <>
           {index < limit && (
-            <BoxItem $width={avatarWidth} $index={index}>
+            <BoxItem
+              $width={avatarWidth}
+              $index={index}
+              $isRtl={language === "fa"}
+            >
               <Image src={item.avatar}></Image>
             </BoxItem>
           )}
         </>
       ))}
       {list.length > limit && (
-        <MoreBox $width={avatarWidth} $amount={limit}>
+        <MoreBox
+          $width={avatarWidth}
+          $amount={limit}
+          $isRtl={language === "fa"}
+          dir="ltr"
+        >
           +{list.length - limit}
         </MoreBox>
       )}
