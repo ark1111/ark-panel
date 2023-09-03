@@ -9,6 +9,7 @@ import {
   TabButtonItem,
 } from "./Events.styled";
 import Week from "./Week";
+import EventList from "./EventList";
 
 type Props = {};
 
@@ -79,6 +80,7 @@ const Events = (props: Props) => {
         </TabButton>
       </Header>
       <Week list={weekList} activeDay={activeDay} setActiveDay={setActiveDay} />
+      <EventList/>
     </Box>
   );
 };

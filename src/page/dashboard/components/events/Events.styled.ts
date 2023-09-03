@@ -32,10 +32,11 @@ export const TabButton = styled.div`
 export const TabButtonItem = styled.div<{ $isActive: boolean }>`
   padding: 0 10px;
   font-size: 14px;
+  font-weight: ${(props) => (props.$isActive ? "600" : "normal")};
   color: ${(props) =>
     props.$isActive
-      ? props.theme.colors.secondary
-      : props.theme.colors.surfaceText};
+      ? props.theme.colors.primary
+      : props.theme.colors.surfaceTextLight};
   cursor: pointer;
 `;
 

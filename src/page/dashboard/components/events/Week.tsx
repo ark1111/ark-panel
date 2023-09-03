@@ -12,7 +12,6 @@ type Props = {
 };
 
 const Week = ({ list, activeDay, setActiveDay }: Props) => {
-    
   const ChangeDay = (index: number) => {
     setActiveDay(index);
   };
@@ -24,11 +23,11 @@ const Week = ({ list, activeDay, setActiveDay }: Props) => {
           $isActive={index === activeDay}
           onClick={() => ChangeDay(index)}
         >
-          <DateText>
+          <DateText $isActive={index === activeDay}>
             {item.date < 10 && "0"}
             {item.date}
           </DateText>
-          <DayText>{item.day}</DayText>
+          <DayText $isActive={index === activeDay}>{item.day}</DayText>
         </BoxItem>
       ))}
     </Box>

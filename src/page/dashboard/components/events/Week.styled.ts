@@ -13,7 +13,7 @@ export const BoxItem = styled.div<{ $isActive: boolean }>`
   padding: 15px 0px;
   padding: ${(props) => (props.$isActive ? "15px 20px" : "15px 0px")};
   background-color: ${(props) =>
-    props.$isActive ? props.theme.colors.secondary : "transparent"};
+    props.$isActive ? props.theme.colors.primary : "transparent"};
   border-radius: 100px;
   display: flex;
   flex-direction: column;
@@ -25,13 +25,15 @@ export const BoxItem = styled.div<{ $isActive: boolean }>`
   transform-origin: center;
 `;
 
-export const DateText = styled.div`
+export const DateText = styled.div<{ $isActive: boolean }>`
   font-size: 20px;
   font-weight: bold;
-  color: ${(props) => props.theme.colors.surfaceText};
+  color: ${(props) =>
+    props.$isActive ? props.theme.colors.primaryText : props.theme.colors.surfaceText};
 `;
 
-export const DayText = styled.div`
+export const DayText = styled.div<{ $isActive: boolean }>`
   font-size: 14px;
-  color: ${(props) => props.theme.colors.surfaceTextLight};
+  color: ${(props) =>
+    props.$isActive ? props.theme.colors.primaryTextLight : props.theme.colors.surfaceTextLight};
 `;

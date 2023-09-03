@@ -28,3 +28,48 @@ export const OffersList = [
     point: 1.9,
   },
 ];
+
+export const eventsList = [
+  {
+    id: 1,
+    title: "Analiysis Project",
+    start: "09:00",
+    end: "10:00",
+    date: "Aug 11th",
+    members: [
+      {
+        id: 1,
+        avatar: "sample-avatar-1.png",
+      },
+      {
+        id: 2,
+        avatar: "sample-avatar-2.png",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Meeting with design teem",
+    start: "11:30",
+    end: "13:00",
+    date: "Aug 11th",
+    members: [
+      {
+        id: 1,
+        avatar: "sample-avatar-1.png",
+      },
+      {
+        id: 2,
+        avatar: "sample-avatar-2.png",
+      },
+      {
+        id: 3,
+        avatar: "sample-avatar3.png",
+      },
+      {
+        id: 4,
+        avatar: "sample-avatar1.png",
+      },
+    ],
+  },
+];
