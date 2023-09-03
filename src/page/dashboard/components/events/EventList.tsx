@@ -8,9 +8,11 @@ import {
   ListItemInfoTime,
   ListItemInfoTitle,
   ListItemTimeAndDate,
+  Members,
   Time,
 } from "./EventList.styled";
 import { eventsList } from "../mockData";
+import AvatarGroup from "../../../../components/avatar-group";
 
 type Props = {};
 
@@ -31,6 +33,9 @@ const EventList = (props: Props) => {
             <ListItemInfoTime>
               {item.start} pm - {item.end} pm
             </ListItemInfoTime>
+            <Members>
+              <AvatarGroup limit={2} list={item.members} />
+            </Members>
           </ListItemInfo>
         </ListItem>
       ))}

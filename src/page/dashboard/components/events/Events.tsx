@@ -79,7 +79,7 @@ const Events = (props: Props) => {
           </TabButtonItem>
         </TabButton>
       </Header>
-      <Week list={weekList} activeDay={activeDay} setActiveDay={setActiveDay} />
+      <Week list={weekList} activeDay={activeDay} setActiveDay={setActiveDay}/>
       <EventList/>
     </Box>
   );

@@ -39,11 +39,11 @@ export const eventsList = [
     members: [
       {
         id: 1,
-        avatar: "sample-avatar-1.png",
+        avatar: "/assets/images/mock/sample-avatar-1.png",
       },
       {
         id: 2,
-        avatar: "sample-avatar-2.png",
+        avatar: "/assets/images/mock/sample-avatar-2.png",
       },
     ],
   },
@@ -56,19 +56,19 @@ export const eventsList = [
     members: [
       {
         id: 1,
-        avatar: "sample-avatar-1.png",
+        avatar: "/assets/images/mock/sample-avatar-1.png",
       },
       {
         id: 2,
-        avatar: "sample-avatar-2.png",
+        avatar: "/assets/images/mock/sample-avatar-2.png",
       },
       {
         id: 3,
-        avatar: "sample-avatar3.png",
+        avatar: "/assets/images/mock/sample-avatar-3.png",
       },
       {
         id: 4,
-        avatar: "sample-avatar1.png",
+        avatar: "/assets/images/mock/sample-avatar1.png",
       },
     ],
   },

@@ -51,3 +51,8 @@ export const ListItemInfoTime = styled.div`
   font-size: 14px;
   color: ${(props) => props.theme.colors.surfaceTextLight};
 `;
+
+export const Members = styled.div`
+  width: 100%;
+  margin-top: 20px;
+`;
