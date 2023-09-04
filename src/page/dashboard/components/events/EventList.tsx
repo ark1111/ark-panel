@@ -16,6 +16,7 @@ import { eventsList } from "../mockData";
 import AvatarGroup from "../../../../components/avatar-group";
 import More1 from "../../../../assets/More1";
 import { useTheme } from "styled-components";
+import moment from "moment";
 
 type Props = {};
 
@@ -39,8 +40,8 @@ const EventList = (props: Props) => {
       {events.map((item) => (
         <ListItem key={item.id}>
           <ListItemTimeAndDate>
-            <Time>{item.start} pm</Time>
-            <DateText>{item.date}</DateText>
+            <Time>{moment(item.start).format("LT")}</Time>
+            <DateText>{moment(item.start).format("MMM Do")}</DateText>
           </ListItemTimeAndDate>
           <ListItemInfo>
             <ListItemInfoHeader>
@@ -50,7 +51,8 @@ const EventList = (props: Props) => {
               </IconBox>
             </ListItemInfoHeader>
             <ListItemInfoTime>
-              {item.start} pm - {item.end} pm
+              {moment(item.start).format("LT")} -{" "}
+              {moment(item.end).format("LT")}
             </ListItemInfoTime>
             <Members>
               <AvatarGroup limit={2} list={item.members} />

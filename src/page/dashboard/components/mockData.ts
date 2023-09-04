@@ -33,9 +33,8 @@ export const eventsList = [
   {
     id: 1,
     title: "Analiysis Project",
-    start: "09:00",
-    end: "10:00",
-    date: "Aug 11th",
+    start: "2023-09-04T09:00:00+0000",
+    end: "2023-09-04T10:00:00+0000",
     members: [
       {
         id: 1,
@@ -50,9 +49,8 @@ export const eventsList = [
   {
     id: 2,
     title: "Meeting with design teem",
-    start: "11:30",
-    end: "13:00",
-    date: "Aug 11th",
+    start: "2023-09-04T11:00:00+0000",
+    end: "2023-09-04T13:00:00+0000",
     members: [
       {
         id: 1,

@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, BoxItem, DateText, DayText } from "./Week.styled";
 
 type Props = {
@@ -15,6 +14,12 @@ const Week = ({ list, activeDay, setActiveDay }: Props) => {
   const ChangeDay = (index: number) => {
     setActiveDay(index);
   };
+
+  const getDateHandler = (date: number) => {
+    let d = new Date(date);
+    return d.getDate();
+  };
+  
   return (
     <Box>
       {list.map((item, index) => (
@@ -24,8 +29,8 @@ const Week = ({ list, activeDay, setActiveDay }: Props) => {
           onClick={() => ChangeDay(index)}
         >
           <DateText $isActive={index === activeDay}>
-            {item.date < 10 && "0"}
-            {item.date}
+            {getDateHandler(item.date) < 10 && "0"}
+            {getDateHandler(item.date)}
           </DateText>
           <DayText $isActive={index === activeDay}>{item.day}</DayText>
         </BoxItem>
