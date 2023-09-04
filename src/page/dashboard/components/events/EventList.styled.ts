@@ -51,6 +51,13 @@ export const ListItemInfoHeader = styled.div`
   justify-content: space-between;
 `;
 
+export const IconBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+`;
+
 export const ListItemInfoTitle = styled.div`
   font-size: 16px;
   color: ${(props) => props.theme.colors.surfaceText};

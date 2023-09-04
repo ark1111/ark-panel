@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   DateText,
+  IconBox,
   List,
   ListItem,
   ListItemInfo,
@@ -13,10 +14,13 @@ import {
 } from "./EventList.styled";
 import { eventsList } from "../mockData";
 import AvatarGroup from "../../../../components/avatar-group";
+import More1 from "../../../../assets/More1";
+import { useTheme } from "styled-components";
 
 type Props = {};
 
 const EventList = (props: Props) => {
+  const theme = useTheme();
   const [events, setEvents] = useState(eventsList);
   const [activeScrollbar, setActiveScrollbar] = useState(false);
 
@@ -41,6 +45,9 @@ const EventList = (props: Props) => {
           <ListItemInfo>
             <ListItemInfoHeader>
               <ListItemInfoTitle>{item.title}</ListItemInfoTitle>
+              <IconBox>
+                <More1 width="5px" color={theme.colors.surfaceText} />
+              </IconBox>
             </ListItemInfoHeader>
             <ListItemInfoTime>
               {item.start} pm - {item.end} pm
