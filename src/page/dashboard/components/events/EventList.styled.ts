@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const List = styled.div<{ $activeScrollbar: boolean }>`
   width: 100%;
-  max-height: 300px;
+  max-height: 350px;
   overflow-y: ${(props) => (props.$activeScrollbar ? "auto" : "hidden")};
   margin-top: 10px;
   &::-webkit-scrollbar {
@@ -42,6 +42,7 @@ export const ListItemInfo = styled.div`
   padding: 15px;
   border-radius: 5px;
   background-color: ${(props) => props.theme.colors.background};
+  position: relative;
 `;
 
 export const ListItemInfoHeader = styled.div`

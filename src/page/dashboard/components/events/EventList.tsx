@@ -18,6 +18,7 @@ import More1 from "../../../../assets/More1";
 import { useTheme } from "styled-components";
 import moment from "moment";
 import { useTranslate } from "../../../../locals/useTranslate";
+import MoreBox from "./MoreBox";
 
 type Props = {};
 
@@ -27,6 +28,17 @@ const EventList = (props: Props) => {
 
   const [events, setEvents] = useState(eventsList);
   const [activeScrollbar, setActiveScrollbar] = useState(false);
+  const [activeMoreBoxIndex, setActiveMoreBoxIndex] = useState<null | number>(
+    null
+  );
+
+  const activeMoreBoxHandler = (id: number) => {
+    setActiveMoreBoxIndex(id);
+  };
+
+  const deactiveMoreBoxHandler = () => {
+    setActiveMoreBoxIndex(null);
+  };
 
   const activeScrollbarHandler = () => {
     setActiveScrollbar(true);
@@ -71,7 +83,7 @@ const EventList = (props: Props) => {
           <ListItemInfo>
             <ListItemInfoHeader>
               <ListItemInfoTitle>{item.title}</ListItemInfoTitle>
-              <IconBox>
+              <IconBox onClick={() => activeMoreBoxHandler(item.id)}>
                 <More1 width="5px" color={theme.colors.surfaceText} />
               </IconBox>
             </ListItemInfoHeader>
@@ -87,6 +99,7 @@ const EventList = (props: Props) => {
             <Members>
               <AvatarGroup limit={2} list={item.members} />
             </Members>
+            {activeMoreBoxIndex === item.id && <MoreBox setActiveMoreBoxIndex={setActiveMoreBoxIndex}/>}
           </ListItemInfo>
         </ListItem>
       ))}

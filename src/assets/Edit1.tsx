@@ -1,0 +1,37 @@
+type Props = {
+  width?: string;
+  color1?: string;
+  color2?: string;
+};
+
+const Edit1 = ({ width, color1, color2 }: Props) => {
+  return (
+    <svg
+      id="Layer_1"
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16.73 16.66"
+      width={width || "20px"}
+    >
+      <path
+        d="m12.06.44l-.59.59,4.2,4.2.59-.59c.34-.34.35-.9,0-1.25L13.3.43c-.34-.34-.9-.34-1.24,0Z"
+        style={{ fill: color2 || "#111" }}
+      />
+      <path
+        d="m11.47,1.03L.47,12.02c-.19.19-.28.45-.26.71l.28,2.68c.04.41.37.74.79.79l2.68.28c.26.02.52-.07.71-.26L15.67,5.23,11.47,1.03Z"
+        style={{ fill: color1 || "#a8a8a8" }}
+      />
+      <rect
+        x="7.94"
+        y="14.21"
+        width="8.58"
+        height="2.28"
+        rx="1.14"
+        ry="1.14"
+        style={{ fill: color2 || "#111" }}
+      />
+    </svg>
+  );
+};
+
+export default Edit1;
