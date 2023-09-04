@@ -23,10 +23,10 @@ const Events = (props: Props) => {
 
   //createWeek-------------------
   useEffect(() => {
-    let { week, todayIndex } = createWeek();
+    let { week, todayIndex } = createWeek(language);
     setWeekList([...week]);
     setActiveDay(todayIndex);
-  }, []);
+  }, [language]);
   //-----------------------------
 
   const changeTabHandler = (value: string) => {

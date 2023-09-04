@@ -17,11 +17,14 @@ import AvatarGroup from "../../../../components/avatar-group";
 import More1 from "../../../../assets/More1";
 import { useTheme } from "styled-components";
 import moment from "moment";
+import { useTranslate } from "../../../../locals/useTranslate";
 
 type Props = {};
 
 const EventList = (props: Props) => {
   const theme = useTheme();
+  const { language } = useTranslate();
+
   const [events, setEvents] = useState(eventsList);
   const [activeScrollbar, setActiveScrollbar] = useState(false);
 
@@ -30,6 +33,20 @@ const EventList = (props: Props) => {
   };
   const deactiveScrollbarHandler = () => {
     setActiveScrollbar(false);
+  };
+
+  const getTimeHandlder = (date: string): string => {
+    const d = new Date(date);
+    return new Intl.DateTimeFormat("fa-IR", { timeStyle: "short" }).format(d);
+  };
+
+  const getDateHandlder = (date: string): string => {
+    const d = new Date(date);
+    return (
+      new Intl.DateTimeFormat("fa-IR", { day: "numeric" }).format(d) +
+      " " +
+      Intl.DateTimeFormat("fa-IR", { month: "long" }).format(d)
+    );
   };
   return (
     <List
@@ -40,8 +57,16 @@ const EventList = (props: Props) => {
       {events.map((item) => (
         <ListItem key={item.id}>
           <ListItemTimeAndDate>
-            <Time>{moment(item.start).format("LT")}</Time>
-            <DateText>{moment(item.start).format("MMM Do")}</DateText>
+            <Time>
+              {language !== "fa"
+                ? moment(item.start).format("LT")
+                : getTimeHandlder(item.start)}
+            </Time>
+            <DateText>
+              {language !== "fa"
+                ? moment(item.start).format("MMM Do")
+                : getDateHandlder(item.start)}
+            </DateText>
           </ListItemTimeAndDate>
           <ListItemInfo>
             <ListItemInfoHeader>
@@ -51,8 +76,13 @@ const EventList = (props: Props) => {
               </IconBox>
             </ListItemInfoHeader>
             <ListItemInfoTime>
-              {moment(item.start).format("LT")} -{" "}
-              {moment(item.end).format("LT")}
+              {language !== "fa"
+                ? moment(item.start).format("LT")
+                : getTimeHandlder(item.start)}{" "}
+              -{" "}
+              {language !== "fa"
+                ? moment(item.end).format("LT")
+                : getTimeHandlder(item.end)}
             </ListItemInfoTime>
             <Members>
               <AvatarGroup limit={2} list={item.members} />

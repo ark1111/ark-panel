@@ -1,3 +1,4 @@
+import { useTranslate } from "../../../../locals/useTranslate";
 import { Box, BoxItem, DateText, DayText } from "./Week.styled";
 
 type Props = {
@@ -11,15 +12,25 @@ type Props = {
 };
 
 const Week = ({ list, activeDay, setActiveDay }: Props) => {
+  const { language } = useTranslate();
+
   const ChangeDay = (index: number) => {
     setActiveDay(index);
   };
 
   const getDateHandler = (date: number) => {
     let d = new Date(date);
-    return d.getDate();
+    if (language !== "fa") {
+      return d.getDate();
+    } else {
+      return Number(
+        new Intl.DateTimeFormat("en-US-u-ca-persian", {
+          day: "numeric",
+        }).format(d)
+      );
+    }
   };
-  
+
   return (
     <Box>
       {list.map((item, index) => (
