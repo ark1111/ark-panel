@@ -8,6 +8,8 @@ export const enLocal = {
     offers: "Offers",
     sample:"Sample",
     title: "title",
+    total_expense:"Total Expense",
+    total_incom:"Total Incom",
     week:"Week"
   },
 };

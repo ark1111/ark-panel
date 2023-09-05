@@ -45,7 +45,7 @@ const Events = (props: Props) => {
         <TabButton>
           <TabButtonItem
             $isActive={activeTab === "week"}
-            onClick={() => changeTabHandler("week")}
+            onClick={() => changeTabHandler("week")} 
           >
             {translate("Week")}
           </TabButtonItem>

@@ -17,7 +17,7 @@ export const Header = styled.div`
 export const HeaderTitle = styled.div`
   font-size: 24px;
   font-weight: bold;
-  color: ${(props) => props.theme.colors.surfaceText};
+  color: ${(props) => props.theme.colors.surfaceText}; 
 `;
 
 export const TabButton = styled.div`
