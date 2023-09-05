@@ -32,6 +32,11 @@ export const DetailsMainText = styled.div`
   color: ${(props) => props.theme.colors.surfaceText};
 `;
 
+export const SpanUnit = styled.span`
+  font-size: 20px;
+  color: ${(props) => props.theme.colors.surfaceTextLight};
+`;
+
 export const DetailsSubTextContainer = styled.div`
   width: 100%;
   display: flex;
@@ -40,12 +45,12 @@ export const DetailsSubTextContainer = styled.div`
   margin-top: 10px;
 `;
 
-export const IconContainer = styled.div`
+export const IconContainer = styled.div<{$isRotate:boolean}>`
   width: 20px;
   height: 20px;
   display: flex;
   align-items: center;
-  border: 1px solid #111;
+  transform: ${(props)=> props.$isRotate ? "rotateX(-180deg)" : "rotateX(0deg)"};
 `;
 
 export const DetailsSubText = styled.div`
@@ -60,5 +65,5 @@ export const Span = styled.span<{ $color: string }>`
 
 export const ChartContainer = styled.div`
   flex: 0.5;
-  height: 20px;
+  height: 100px;
 `;

@@ -9,10 +9,12 @@ import {
 import Offers from "./components/Offers";
 import Events from "./components/events/Events";
 import InfoCard from "./components/info card/InfoCard";
+import { useTranslate } from "../../locals/useTranslate";
 
 type Props = {};
 
 const Dashboard = (props: Props) => {
+  const { language } = useTranslate();
   return (
     <Container>
       <Section1>
@@ -20,10 +22,20 @@ const Dashboard = (props: Props) => {
           <Offers />
           <InfoCards>
             <InfoCardsItem>
-              <InfoCard />
+              <InfoCard
+                title="total_incom"
+                amount={language === "fa" ? 7778880000 : 250964.0}
+                unit={language === "fa" ? "toman" : "$"}
+                percent={10}
+              />
             </InfoCardsItem>
             <InfoCardsItem>
-              <InfoCard />
+              <InfoCard
+                title="total_expense"
+                amount={language === "fa" ? -3678000000 : -180964.0}
+                unit={language === "fa" ? "toman" : "$"}
+                percent={37}
+              />
             </InfoCardsItem>
           </InfoCards>
         </SectionPart1>

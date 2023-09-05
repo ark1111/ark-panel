@@ -7,6 +7,7 @@ export const enLocal = {
     notification: "Notification",
     offers: "Offers",
     sample:"Sample",
+    than_last_week:"than last week",
     title: "title",
     total_expense:"Total Expense",
     total_incom:"Total Incom",
