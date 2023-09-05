@@ -11,11 +11,13 @@ import {
 import Week from "./Week";
 import EventList from "./EventList";
 import { createWeek } from "./functions";
+import Day from "./Day";
 
 type Props = {};
 const Events = (props: Props) => {
   const { translate, language } = useTranslate();
   const [activeTab, setAtiveTab] = useState("week");
+  const [today, setToday] = useState(0);
   const [weekList, setWeekList] = useState<
     { id: number; day: string; date: number }[]
   >([]);
@@ -26,11 +28,15 @@ const Events = (props: Props) => {
     let { week, todayIndex } = createWeek(language);
     setWeekList([...week]);
     setActiveDay(todayIndex);
+    setToday(todayIndex);
   }, [language]);
   //-----------------------------
 
   const changeTabHandler = (value: string) => {
     setAtiveTab(value);
+    if (value === "day") {
+      setActiveDay(today);
+    }
   };
   return (
     <Box>
@@ -52,7 +58,14 @@ const Events = (props: Props) => {
           </TabButtonItem>
         </TabButton>
       </Header>
-      <Week list={weekList} activeDay={activeDay} setActiveDay={setActiveDay} />
+      {activeTab === "day" && <Day today={weekList[today]} />}
+      {activeTab === "week" && (
+        <Week
+          list={weekList}
+          activeDay={activeDay}
+          setActiveDay={setActiveDay}
+        />
+      )}
       <EventList />
     </Box>
   );
