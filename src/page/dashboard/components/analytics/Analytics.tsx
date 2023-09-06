@@ -5,7 +5,11 @@ import {
   BoxItemDetails,
   BoxItemImage,
   Header,
+  ItemBox,
+  ItemBoxTitle,
+  ItemBoxValue,
   Items,
+  ItemsContainer,
   ItemsTitle,
   Subtitle,
   Title,
@@ -32,6 +36,14 @@ const Analytics = (props: Props) => {
           </Header>
           <Items>
             <ItemsTitle>{translate("Traffic")}</ItemsTitle>
+            <ItemsContainer>
+              {[1,2,3,4].map((item)=>(
+                <ItemBox>
+                  <ItemBoxTitle>hello</ItemBoxTitle>
+                  <ItemBoxValue>stunning...</ItemBoxValue>
+                </ItemBox>
+              ))}
+            </ItemsContainer>
           </Items>
         </BoxItemDetails>
         <BoxItemImage></BoxItemImage>
