@@ -11,7 +11,9 @@ export const enLocal = {
     title: "title",
     total_expense:"Total Expense",
     total_incom:"Total Incom",
+    traffic:"Traffic",
     website_analytics:"Website Analytics",
+    website_analytics_subtitle:"Total x% Conversion Rate",
     week:"Week"
   },
 };

@@ -16,7 +16,7 @@ import Day from "./Day";
 type Props = {};
 const Events = (props: Props) => {
   const { translate, language } = useTranslate();
-  const [activeTab, setAtiveTab] = useState("week");
+  const [activeTab, setAtiveTab] = useState("week"); 
   const [today, setToday] = useState(0);
   const [weekList, setWeekList] = useState<
     { id: number; day: string; date: number }[]

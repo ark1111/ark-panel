@@ -4,7 +4,7 @@ export const Box = styled.div`
   width: 100%;
   aspect-ratio: 1/0.5;
   border-radius: 10px;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.surface};
   position: relative;
   overflow: hidden;
   margin-top: 20px;
@@ -31,10 +31,29 @@ export const BoxItemDetails = styled.div`
   justify-content: space-between;
 `;
 
+export const Header = styled.div`
+  width: 100%;
+`;
+
 export const Title = styled.div`
   font-size: 24px;
   font-weight: bold;
-  color: ${(props) => props.theme.colors.primaryText};
+  color: ${(props) => props.theme.colors.surfaceText};
+`;
+
+export const Subtitle = styled.div`
+  font-size: 16px;
+  font-weight: bold;
+  color: ${(props) => props.theme.colors.surfaceTextLight};
+`;
+
+export const Items = styled.div`
+  width: 100%;
+`;
+
+export const ItemsTitle = styled.div`
+  font-size: 18px;
+  color: ${(props) => props.theme.colors.surfaceText};
 `;
 
 export const BoxItemImage = styled.div`
