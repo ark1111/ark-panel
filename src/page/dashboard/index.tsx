@@ -10,6 +10,7 @@ import Offers from "./components/Offers";
 import Events from "./components/events/Events";
 import InfoCard from "./components/info card/InfoCard";
 import { useTranslate } from "../../locals/useTranslate";
+import Analytics from "./components/analytics/Analytics";
 
 type Props = {};
 
@@ -41,6 +42,7 @@ const Dashboard = (props: Props) => {
         </SectionPart1>
         <SectionPart2>
           <Events />
+          <Analytics/>
         </SectionPart2>
       </Section1>
     </Container>

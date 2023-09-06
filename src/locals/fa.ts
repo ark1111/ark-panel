@@ -13,6 +13,7 @@ export const faLocal = {
     toman: "تومان",
     total_expense: "هزینه کل",
     total_incom: "درآمد کل",
+    website_analytics:"آمار سایت",
     week: "هفته",
   },
 };
