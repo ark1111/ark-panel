@@ -24,7 +24,7 @@ const Dashboard = (props: Props) => {
             <InfoCardsItem>
               <InfoCard
                 title="total_incom"
-                amount={language === "fa" ? 7778880000 : 250964.0}
+                amount={language === "fa" ? 7778880000 : 2509646670.0}
                 unit={language === "fa" ? "toman" : "$"}
                 percent={10}
               />
@@ -32,7 +32,7 @@ const Dashboard = (props: Props) => {
             <InfoCardsItem>
               <InfoCard
                 title="total_expense"
-                amount={language === "fa" ? -3678000000 : -180964.0}
+                amount={language === "fa" ? -3678000000 : -1809645550.0}
                 unit={language === "fa" ? "toman" : "$"}
                 percent={37}
               />

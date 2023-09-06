@@ -24,17 +24,37 @@ export const Contents = styled.div`
 
 export const Details = styled.div`
   flex: 1;
+  flex-shrink: 0;
 `;
 
 export const DetailsMainText = styled.div`
   font-size: 40px;
   font-weight: bold;
   color: ${(props) => props.theme.colors.surfaceText};
+
+  //responsive config -----------------------------
+  @media (min-width: 1850px) {
+    font-size: 25px;
+  }
+  @media (min-width: 2050px) {
+    font-size: 30px;
+  }
+  @media (min-width: 2250px) {
+    font-size: 35px;
+  }
+  @media (min-width: 2400px) {
+    font-size: 40px;
+  }
 `;
 
 export const SpanUnit = styled.span`
-  font-size: 20px;
+  font-size: 17px;
   color: ${(props) => props.theme.colors.surfaceTextLight};
+
+  //responsive config -----------------------------
+  @media (min-width: 2250px) {
+    font-size: 20px;
+  }
 `;
 
 export const DetailsSubTextContainer = styled.div`
@@ -45,12 +65,13 @@ export const DetailsSubTextContainer = styled.div`
   margin-top: 10px;
 `;
 
-export const IconContainer = styled.div<{$isRotate:boolean}>`
+export const IconContainer = styled.div<{ $isRotate: boolean }>`
   width: 20px;
   height: 20px;
   display: flex;
   align-items: center;
-  transform: ${(props)=> props.$isRotate ? "rotateX(-180deg)" : "rotateX(0deg)"};
+  transform: ${(props) =>
+    props.$isRotate ? "rotateX(-180deg)" : "rotateX(0deg)"};
 `;
 
 export const DetailsSubText = styled.div`
@@ -64,6 +85,14 @@ export const Span = styled.span<{ $color: string }>`
 `;
 
 export const ChartContainer = styled.div`
-  flex: 0.5;
+  flex: 0.35;
+  flex-shrink: 0;
   height: 100px;
+  //responsive config -----------------------------
+  @media (min-width: 2050px) {
+    flex: 0.4;
+  }
+  @media (min-width: 2250px) {
+    flex: 0.5;
+  }
 `;
