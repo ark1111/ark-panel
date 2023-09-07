@@ -68,15 +68,19 @@ export const ItemBox = styled.div`
   flex-shrink: 0;
 `;
 
-export const ItemBoxTitle = styled.div`
+export const ItemBoxValue = styled.div`
   font-size: 18px;
-  padding: 10px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   background-color: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.surfaceText};
 `;
 
-export const ItemBoxValue = styled.div`
+export const ItemBoxTitle = styled.div`
   font-size: 18px;
   color: ${(props) => props.theme.colors.surfaceText};
 `;

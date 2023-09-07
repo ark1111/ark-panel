@@ -1,13 +1,18 @@
 export const faLocal = {
   translation: {
     all: "همه",
+    app_analytics:"آمار اپلیکیشن",
+    app_analytics_subtitle:"نرخ تبدیل کل x%",
     dashboard: "داشبورد",
     day: "روز",
     events: "رویدادها",
+    insights:'داده ها',
     notification: "اعلانات",
     offers: "پیشنهادات",
     rial: "ریال",
     sample: "نمونه",
+    social_media_analytics:"آمار شبکه‌های اجتماعی",
+    social_media_analytics_subtitle:"نرخ تبدیل کل x%",
     than_last_week: "نسبت به هفته گذشته",
     title: "عنوان",
     toman: "تومان",
