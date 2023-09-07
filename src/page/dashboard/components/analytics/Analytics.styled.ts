@@ -8,19 +8,23 @@ export const Box = styled.div`
   position: relative;
   overflow: hidden;
   margin-top: 20px;
+  display: flex;
 `;
 
 // export const Slider = styled.div`
 //   height: 100%;
 // `;
 
-export const BoxItem = styled.div`
+export const BoxItem = styled.div<{ $move: number }>`
   width: 100%;
   height: 100%;
   padding: 30px;
   display: flex;
   align-items: center;
   column-gap: 20px;
+  transition: all 1s;
+  flex-shrink: 0;
+  transform: ${(props) => `translateX(${-props.$move * 100}%)`};
 `;
 
 export const BoxItemDetails = styled.div`
@@ -96,4 +100,25 @@ export const BoxItemImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const Dots = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 2;
+`;
+
+export const DotsItem = styled.div<{ $isActive: boolean }>`
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  background-color: ${(props) =>
+    props.$isActive
+      ? props.theme.colors.surfaceText
+      : props.theme.colors.background};
+  cursor: pointer;
 `;

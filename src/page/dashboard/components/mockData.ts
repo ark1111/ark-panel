@@ -193,7 +193,7 @@ export const sampleAnalyticData = [
         id: 14,
         title: "Tiktok",
         amount: 5,
-        isPercent: false,
+        isPercent: true,
       },
       {
         id: 15,
