@@ -16,6 +16,7 @@ export const Container = styled.div<{ $direction: string; $language: string }>`
 export const Page = styled.div`
   width: calc(100% - 400px);
   height: 100%;
+  flex-shrink: 0;
 `;
 
 export const Content = styled.div<{
@@ -25,6 +26,7 @@ export const Content = styled.div<{
   width: 100%;
   max-height: calc(100% - 140px);
   margin: 20px 0px;
+  overflow-x: hidden;
   overflow-y: auto;
   padding-right: ${(props) =>
     !props.$isRtl && props.$scrollIsActive ? "20px" : "0px"};

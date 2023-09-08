@@ -110,6 +110,7 @@ export const sampleAnalyticData = [
     subtitle: "website_analytics_subtitle",
     detailsTitle: "Traffic",
     diff:10,
+    image:"/assets/images/mock/G-1.png",
     details: [
       {
         id: 2,
@@ -143,6 +144,7 @@ export const sampleAnalyticData = [
     subtitle: "app_analytics_subtitle",
     detailsTitle: "insights",
     diff:5,
+    image:"/assets/images/mock/G-2.png",
     details: [
       {
         id: 7,
@@ -176,6 +178,7 @@ export const sampleAnalyticData = [
     subtitle: "social_media_analytics_subtitle",
     detailsTitle: "insights",
     diff:20,
+    image:"/assets/images/mock/G-3.png",
     details: [
       {
         id: 12,

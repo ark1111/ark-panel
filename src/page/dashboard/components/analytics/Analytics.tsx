@@ -7,6 +7,7 @@ import {
   Dots,
   DotsItem,
   Header,
+  Image,
   ItemBox,
   ItemBoxTitle,
   ItemBoxValue,
@@ -80,7 +81,9 @@ const Analytics = (props: Props) => {
               </ItemsContainer>
             </Items>
           </BoxItemDetails>
-          <BoxItemImage></BoxItemImage>
+          <BoxItemImage>
+            <Image src={item.image}></Image>
+          </BoxItemImage>
         </BoxItem>
       ))}
       <Dots>

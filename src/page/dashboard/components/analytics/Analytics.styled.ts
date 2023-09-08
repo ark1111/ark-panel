@@ -96,10 +96,16 @@ export const ItemsTitle = styled.div`
 
 export const BoxItemImage = styled.div`
   flex: 0.7;
+  flex-shrink: 0;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const Image = styled.img`
+  flex-shrink: 0;
+  height: 80%;
 `;
 
 export const Dots = styled.div`

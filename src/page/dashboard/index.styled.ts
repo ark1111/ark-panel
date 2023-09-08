@@ -12,13 +12,15 @@ export const Section1 = styled.div`
 `;
 
 export const SectionPart1 = styled.div`
-  flex: 1;
-  flex-shrink: 0;
+  /* flex: 1; */
+  width: 55%;
+  flex-shrink: 0 !important;
 `;
 
 export const SectionPart2 = styled.div`
-  flex: 0.8;
-  flex-shrink: 0;
+  /* flex: 0.8; */
+  width: calc(45% - 20px);
+  flex-shrink: 0 !important;
 `;
 
 export const InfoCards = styled.div`
