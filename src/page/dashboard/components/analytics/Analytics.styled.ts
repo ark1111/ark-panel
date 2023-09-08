@@ -15,16 +15,22 @@ export const Box = styled.div`
 //   height: 100%;
 // `;
 
-export const BoxItem = styled.div<{ $move: number }>`
+export const BoxItem = styled.div<{
+  $move: number;
+  $isRtl: boolean;
+  $isActive: boolean;
+}>`
   width: 100%;
   height: 100%;
   padding: 30px;
   display: flex;
   align-items: center;
   column-gap: 20px;
-  transition: all 1s;
+  transition: all 1s , opacity 2s ;
   flex-shrink: 0;
-  transform: ${(props) => `translateX(${-props.$move * 100}%)`};
+  transform: ${(props) =>
+    `translateX(${(props.$isRtl ? 1 : -1) * props.$move * 100}%)`};
+  opacity: ${(props) => (props.$isActive ? 1 : 0)};
 `;
 
 export const BoxItemDetails = styled.div`
@@ -108,13 +114,14 @@ export const Image = styled.img`
   height: 80%;
 `;
 
-export const Dots = styled.div`
+export const Dots = styled.div<{ $isRtl: boolean }>`
   display: flex;
   align-items: center;
   column-gap: 10px;
   position: absolute;
   top: 30px;
-  right: 30px;
+  right: ${(props) => (props.$isRtl ? "initial" : "30px")};
+  left: ${(props) => (props.$isRtl ? "30px" : "initial")};
   z-index: 2;
 `;
 

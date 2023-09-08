@@ -55,8 +55,8 @@ const Analytics = (props: Props) => {
   };
   return (
     <Box>
-      {data?.map((item) => (
-        <BoxItem key={item.id} $move={move}>
+      {data?.map((item,index) => (
+        <BoxItem key={item.id} $move={move}  $isRtl={language==="fa"} $isActive={index===move}>
           <BoxItemDetails>
             <Header>
               <Title>{translate(item.title)}</Title>
@@ -75,7 +75,7 @@ const Analytics = (props: Props) => {
                         : convertAmount(detailItem.amount)}
                       {detailItem.isPercent && "%"}
                     </ItemBoxValue>
-                    <ItemBoxTitle>{detailItem.title}</ItemBoxTitle>
+                    <ItemBoxTitle>{translate(detailItem.title)}</ItemBoxTitle>
                   </ItemBox>
                 ))}
               </ItemsContainer>
@@ -86,7 +86,7 @@ const Analytics = (props: Props) => {
           </BoxItemImage>
         </BoxItem>
       ))}
-      <Dots>
+      <Dots $isRtl={language==="fa"}>
         {dots.map((item, index) => (
           <DotsItem
             key={item}
