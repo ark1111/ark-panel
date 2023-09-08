@@ -6,8 +6,6 @@ export const createWeek = (language?: string) => {
   let day = today.getDay();
   let todayIndex = day === 0 ? 6 : day - 1;
   let week = [];
-  console.log("day");
-  console.log(day);
   if (language !== "fa") {
     for (let i = 1; i < 8; i++) {
       let diff = day - i;
@@ -21,14 +19,23 @@ export const createWeek = (language?: string) => {
   } else {
     day = weekDaysFaIndex[day];
     todayIndex = day === 0 ? 6 : day - 1;
+    console.log(todayIndex);
     for (let i = 1; i < 8; i++) {
       let diff = day - i;
       const d = new Date();
-      week.push({
-        id: i,
-        day: weekDaysFa[i - 1],
-        date: d.setDate(d.getDate() - diff),
-      });
+      if (todayIndex === 6) {
+        week.push({
+          id: i,
+          day: weekDaysFa[i - 1],
+          date: d.setDate(d.getDate() - 7 + i),
+        });
+      } else {
+        week.push({
+          id: i,
+          day: weekDaysFa[i - 1],
+          date: d.setDate(d.getDate() - diff),
+        });
+      }
     }
   }
   return {

@@ -26,7 +26,7 @@ export const BoxItem = styled.div<{
   display: flex;
   align-items: center;
   column-gap: 20px;
-  transition: all 1s , opacity 2s ;
+  transition: all 1s, opacity 2s;
   flex-shrink: 0;
   transform: ${(props) =>
     `translateX(${(props.$isRtl ? 1 : -1) * props.$move * 100}%)`};
@@ -34,11 +34,17 @@ export const BoxItem = styled.div<{
 `;
 
 export const BoxItemDetails = styled.div`
-  flex: 1;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (min-width: 2200px) {
+    width: 65%;
+  }
+  @media (min-width: 2300px) {
+    width: 60%;
+  }
 `;
 
 export const Header = styled.div`
@@ -101,17 +107,26 @@ export const ItemsTitle = styled.div`
 `;
 
 export const BoxItemImage = styled.div`
-  flex: 0.7;
+  width: calc(30% - 20px);
   flex-shrink: 0;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (min-width: 2200px) {
+    width: calc(35% - 20px);
+  }
+  @media (min-width: 2300px) {
+    width: calc(40% - 20px);
+  }
 `;
 
 export const Image = styled.img`
   flex-shrink: 0;
-  height: 80%;
+  height: 70%;
+  @media (min-width: 2300px) {
+    height: 80%;
+  }
 `;
 
 export const Dots = styled.div<{ $isRtl: boolean }>`
