@@ -96,7 +96,7 @@ const Nav = (props: Props) => {
               {item.childs?.length > 0 && (
                 <MenuItemChilds $isActive={item.id === activeToggleId}>
                   {item.childs.map((childItem) => (
-                    <Link to={childItem.link}>
+                    <Link key={childItem.id} to={childItem.link}>
                       <MenuItemChildItem
                         key={childItem.id}
                         onClick={() => childchangeNav(item.id, childItem.id)}

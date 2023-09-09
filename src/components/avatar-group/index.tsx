@@ -16,7 +16,7 @@ const AvatarGroup = ({ list, limit, avatarWidth }: Props) => {
   return (
     <Box>
       {list.map((item, index) => (
-        <>
+        <React.Fragment key={item.id}>
           {index < limit && (
             <BoxItem
               $width={avatarWidth}
@@ -26,7 +26,7 @@ const AvatarGroup = ({ list, limit, avatarWidth }: Props) => {
               <Image src={item.avatar}></Image>
             </BoxItem>
           )}
-        </>
+        </React.Fragment>
       ))}
       {list.length > limit && (
         <MoreBox
