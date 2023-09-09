@@ -2,13 +2,31 @@ import { styled } from "styled-components";
 
 export const Box = styled.div`
   width: 100%;
-  aspect-ratio: 1/0.4;
+  aspect-ratio: 1/0.5;
   border-radius: 10px;
   background-color: ${(props) => props.theme.colors.surface};
   position: relative;
   overflow: hidden;
   margin-top: 20px;
   display: flex;
+  @media (min-width: 1400px) {
+    aspect-ratio: 1/1;
+  }
+  @media (min-width: 1550px) {
+    aspect-ratio: 1/0.85;
+  }
+  @media (min-width: 1700px) {
+    aspect-ratio: 1/0.75;
+  }
+  @media (min-width: 1850px) {
+    aspect-ratio: 1/0.6;
+  }
+  @media (min-width: 1930px) {
+    aspect-ratio: 1/0.5;
+  }
+  @media (min-width: 2100px) {
+    aspect-ratio: 1/0.4;
+  }
 `;
 
 // export const Slider = styled.div`
@@ -77,33 +95,49 @@ export const ItemsContainer = styled.div`
 `;
 
 export const ItemBox = styled.div`
-  width: calc(50% - 10px);
+  width: 100%;
   display: flex;
   align-items: center;
   column-gap: 10px;
   flex-shrink: 0;
+  @media (min-width: 1850px) {
+    width: calc(50% - 10px);
+  }
 `;
 
 export const ItemBoxValue = styled.div`
-  font-size: 18px;
-  width: 100px;
-  height: 50px;
+  font-size: 16px;
+  width: 80px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   background-color: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.surfaceText};
+  @media (min-width: 1930px) {
+    font-size: 18px;
+  }
+  @media (min-width: 2100px) {
+    width: 100px;
+    height: 50px;
+  }
 `;
 
 export const ItemBoxTitle = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   color: ${(props) => props.theme.colors.surfaceText};
+  @media (min-width: 1930px) {
+    font-size: 18px;
+  }
 `;
 
 export const ItemsTitle = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   color: ${(props) => props.theme.colors.surfaceText};
+  @media (min-width: 1930px) {
+    font-size: 18px;
+  }
 `;
 
 export const BoxItemImage = styled.div`
@@ -123,7 +157,15 @@ export const BoxItemImage = styled.div`
 
 export const Image = styled.img`
   flex-shrink: 0;
-  height: 70%;
+  height: 50%;
+  display: none;
+  @media (min-width: 1800px) {
+    height: 60%;
+    display: block;
+  }
+  @media (min-width: 1900px) {
+    height: 70%;
+  }
   @media (min-width: 2300px) {
     height: 80%;
   }

@@ -9,18 +9,24 @@ export const Section1 = styled.div`
   display: flex;
   column-gap: 20px;
   margin-bottom: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
 `;
 
 export const SectionPart1 = styled.div`
-  /* flex: 1; */
-  width: 55%;
+  width: 100%;
   flex-shrink: 0 !important;
+  @media (min-width: 1400px) {
+    width: 55%;
+  }
 `;
 
 export const SectionPart2 = styled.div`
-  /* flex: 0.8; */
-  width: calc(45% - 20px);
+  width: 100%;
   flex-shrink: 0 !important;
+  @media (min-width: 1400px) {
+    width: calc(45% - 20px);
+  }
 `;
 
 export const InfoCards = styled.div`

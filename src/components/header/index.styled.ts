@@ -12,8 +12,11 @@ export const Box = styled.div`
 `;
 
 export const SearchBoxContainer = styled.div`
-  width: 400px;
+  width: 250px;
   height: 50px;
+  @media (min-width: 1200px) {
+    width: 400px;
+  }
 `;
 
 export const ButtonsContainer = styled.div`

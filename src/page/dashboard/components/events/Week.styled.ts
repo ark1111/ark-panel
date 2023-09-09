@@ -11,7 +11,7 @@ export const Box = styled.div`
 //need responsive setting
 export const BoxItem = styled.div<{ $isActive: boolean }>`
   padding: 15px 0px;
-  padding: ${(props) => (props.$isActive ? "15px 20px" : "15px 0px")};
+  padding: ${(props) => (props.$isActive ? "15px 10px" : "15px 0px")};
   background-color: ${(props) =>
     props.$isActive ? props.theme.colors.primary : "transparent"};
   border-radius: 100px;
@@ -23,13 +23,19 @@ export const BoxItem = styled.div<{ $isActive: boolean }>`
   cursor: pointer;
   transition: all 0.5s;
   transform-origin: center;
+  @media (min-width: 1500px) {
+    padding: ${(props) => (props.$isActive ? "15px 20px" : "15px 0px")};;
+  }
 `;
 
 export const DateText = styled.div<{ $isActive: boolean }>`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: ${(props) =>
     props.$isActive ? props.theme.colors.primaryText : props.theme.colors.surfaceText};
+  @media (min-width: 1500px) {
+    font-size: 20px;
+  }
 `;
 
 export const DayText = styled.div<{ $isActive: boolean }>`

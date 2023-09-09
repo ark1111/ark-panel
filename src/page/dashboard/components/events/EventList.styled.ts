@@ -48,7 +48,7 @@ export const ListItemInfo = styled.div`
 export const ListItemInfoHeader = styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
 `;
 
@@ -57,6 +57,10 @@ export const IconBox = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transform: translateY(5px);
+  @media (min-width: 1600px) {
+    transform: translateY(0px);
+  }
 `;
 
 export const ListItemInfoTitle = styled.div`
