@@ -111,6 +111,7 @@ export const sampleAnalyticData = [
     detailsTitle: "Traffic",
     diff:10,
     image:"/assets/images/mock/G-1.png",
+    image_dark:"/assets/images/mock/G-1-dark.png",
     details: [
       {
         id: 2,
@@ -145,6 +146,7 @@ export const sampleAnalyticData = [
     detailsTitle: "insights",
     diff:5,
     image:"/assets/images/mock/G-2.png",
+    image_dark:"/assets/images/mock/G-2-dark.png",
     details: [
       {
         id: 7,
@@ -179,6 +181,7 @@ export const sampleAnalyticData = [
     detailsTitle: "insights",
     diff:20,
     image:"/assets/images/mock/G-3.png",
+    image_dark:"/assets/images/mock/G-3-dark.png",
     details: [
       {
         id: 12,

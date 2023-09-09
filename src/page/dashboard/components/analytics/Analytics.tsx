@@ -19,14 +19,22 @@ import {
 } from "./Analytics.styled";
 import { useTranslate } from "../../../../locals/useTranslate";
 import { sampleAnalyticData } from "../mockData";
+import { useTheme } from "styled-components";
 
 type Props = {};
 
 const Analytics = (props: Props) => {
   const { translate, language } = useTranslate();
+  const theme = useTheme();
   const [data, setData] = useState(sampleAnalyticData);
   const [dots, setDots] = useState<number[]>([]);
   const [move, setMove] = useState(0);
+  const [themeIndex, setThemeIndex] = useState(1);
+
+  useEffect(() => {
+    let index = Number(localStorage.getItem("themeIndex"));
+    setThemeIndex(index);
+  }, [theme]);
 
   useEffect(() => {
     let newArray = [];
@@ -55,8 +63,13 @@ const Analytics = (props: Props) => {
   };
   return (
     <Box>
-      {data?.map((item,index) => (
-        <BoxItem key={item.id} $move={move}  $isRtl={language==="fa"} $isActive={index===move}>
+      {data?.map((item, index) => (
+        <BoxItem
+          key={item.id}
+          $move={move}
+          $isRtl={language === "fa"}
+          $isActive={index === move}
+        >
           <BoxItemDetails>
             <Header>
               <Title>{translate(item.title)}</Title>
@@ -82,11 +95,13 @@ const Analytics = (props: Props) => {
             </Items>
           </BoxItemDetails>
           <BoxItemImage>
-            <Image src={item.image}></Image>
+            <Image
+              src={themeIndex === 1 ? item.image_dark : item.image}
+            ></Image>
           </BoxItemImage>
         </BoxItem>
       ))}
-      <Dots $isRtl={language==="fa"}>
+      <Dots $isRtl={language === "fa"}>
         {dots.map((item, index) => (
           <DotsItem
             key={item}
